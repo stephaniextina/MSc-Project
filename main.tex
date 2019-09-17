@@ -36,7 +36,12 @@
 \newpage
 
 \begin{abstract}
-    Abstract abstract 
+    A project 
+    
+    The goal of this project would to build.
+    Background research was conducted to 
+    3
+    The
 
 \end{abstract}
 
@@ -438,7 +443,7 @@
                 In contrast to Topetope, the application I create should have a clear and obvious goal. A tutorial may be necessary as this would have been useful in this case. My application should be thoroughly tested at each stage and needs to reliably work throughout. This is especially important due to the relaxing mindfulness component of my application. Another aspect to consider is if the user is cutting the paper, with Topetope is not clear which side of the paper will be disappearing after it is cut. I need to make this decision clear if I am making it for the user, or allow the user to choose for themselves. 
 
 
-       \subsection{Overall Lessons from Other Applications}
+       \subsection{Lessons Learned from Similar Applications}
        
             \paragraph{}
             Searching for web applications as well of iPhone apps turned out to be a useful path as Paper Snowflake Maker was the only application where the cutting action worked reliably.
@@ -655,8 +660,8 @@
     \begin{enumerate}
         \item   Performance
             \begin{enumerate}[label*=\arabic*.]
-            \item The application should respond to the users touch within 0.5 seconds.
-             \item The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
+            \item The application should respond to the users touch within 0.5 seconds while making the cuts.
+            \item The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
             \end{enumerate}
             
         \item Useability
@@ -698,17 +703,19 @@
     I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly.
     
             \subsection{Choose Fold}
-                \begin{wrapfigure}{r}{0.25\textwidth}
-                        \centering
-                        \includegraphics[width=0.25\textwidth]{KiriZen/chooseFold.png}
-                        \caption{Icon}
-                        \label{fig:kiriZen-chooseFold}
-                \end{wrapfigure}
                     
             \subsubsection{Segue}
             In the storyboard I assigned a tag with each buttons in choose fold depending on how many folds they were associated with. In the storyboard also added segues from each button to the next view controller. Segues are transitions between view controllers which can be named. In the class "ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable (buttonPressed) to the value of the tag. This information is then carried to the next view controller using prepare for segue function.
             
+                         \begin{wrapfigure}{l}{0.25\textwidth}
+                        \centering
+                        \includegraphics[width=0.25\textwidth]{KiriZen/chooseFold.png}
+                        \caption{choose}
+                        \label{fig:kiriZen-chooseFold}
+                    \end{wrapfigure}
+                    
             The use of tags and segues is important as the button pressed in choose fold determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers and determines how it will be transformed and revealed.
+            
                 
             \subsection{Create Pattern}
              \begin{wrapfigure}{l}{0.25\textwidth}
@@ -838,8 +845,6 @@ Target Overlay – alpha 0.7
 \clearpage
 \newpage
 \section{Human Computer Interaction}
-    \paragraph{}
-
     
     \subsection{Theme}
         
@@ -850,13 +855,7 @@ Target Overlay – alpha 0.7
 
         \subsection{Additional Features}
             \paragraph{}
-        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete and consistent experience for the user.
-        
-%         Creating interesting target patterns
-% Zoom pinch on final pattern
-
-
-Additional features include the icon, music player, information page etc are explained below. 
+        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete and consistent experience for the user. Creating interesting target patterns was necessary to keep the user engaged and I tried to create a variety of difficulties for each fold. One small feature was the Zoom pinch on the final pattern which most users will not require but they are able to use this feature if they attempt to. 
         
          \subsubsection{Graphics}
                 \paragraph{}
@@ -1027,8 +1026,6 @@ Additional features include the icon, music player, information page etc are exp
 \newpage
 \section{Discussion}
     \subsection{Achievements}
-        \subsubsection{Architecture}
-        
         \paragraph{}
         using inheritance ... 
          flexibility, scalability, feasibility, reusability, and security into a structured solution
@@ -1036,14 +1033,13 @@ Additional features include the icon, music player, information page etc are exp
          common buttons - consistency
          canvas, reveal. 
         
-        \paragraph{}
         While creating making smaller methods
         
-        \subsubsection{Final Product}
         I created an application from scratch in a new language I was not familiar with. The application is unlike the other iPhone application I researched as it has consistent features and a reliable cutting action. The majority of users reported they felt relaxed while using the application confirming that it can be used as an effective part of the mindfulness practice therefore I believe I have achieved my aims. 
         
         While conducting the background research, I was surprised with how few of the apps had a reliable core cutting features and many inconsistencies throughout. My application contrasts this and users pick up on the core functionality quickly.
-
+        
+        I am satisfied that I implemented all of the major requirements successfully and was able to expand by adding smaller non-core features.
         
     \subsection{Challenges}
     
@@ -1065,25 +1061,7 @@ Additional features include the icon, music player, information page etc are exp
             
             The process of creating this application was very new and difficult. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use. 
             
-            
-    \subsection{Future}
-        
-                \paragraph{}
-                
-                Test out what I found from the heuristics. Time constraint in this case. 
-                
-                Higher number of folds - 10, 12...
-                
-                Match pattern section
-                Additional functionality could be added to the app such as an algorithm to generate random target images shaped but more sophisticated than randomly rendering shapes - some restrictions could apply such as shapes not touching - the variate of shapes etc.
-                
-                Algorithms for comparing target images to the image the user created 
-                
-                Wallpaper - repetitive pattern - will be easier having created and understood  reveal section. 
-                
-                
-                
-
+                            
 %                 Challenges:
 % Learning swift
 % Xcode – notoriously buggy
@@ -1095,20 +1073,30 @@ Additional features include the icon, music player, information page etc are exp
 % Turned into an app that is meant for relaxing 
 % Added instructions, then used animations rather than instructions
 % Added additional functionality to undo and clear buttons
+            
+    \subsection{Future}
+        
+                \paragraph{}
+                
+                There is still some room for improvement as pointed out in the heuristic evaluation. I could improve the usability by editing some features such as the target button to make it easier to use and have some pop-ups as pointers throughout upon the first use of the application. Given more time I could test on a wider range of users and evaluate their response to the edits that can be made in the application. 
+                
+                
+                Additional functionality could be added to the app such as an algorithm to generate random target images shaped but more sophisticated than randomly rendering shapes - some restrictions could apply such as shapes not touching - the variety of shapes etc.
+                
+                Algorithms for comparing target images to the image the user created
 
-
-
+                When saving the final image, there could be options for crating a wallpaper. They could be created by repeating the patter
+                along the style of tessellations. 
 
 \newpage
 \section{Conclusion}
         
             \paragraph{}
-            I have achieved my aims for the project by producing an idea for a kirigami themed application that I developed into an piece I am proud of that reflects myself. 
             
-            The application has shown to a new audience that kirigami can be a relaxing recreational activity and I hope to inspire them to physically recreate their favourite designs in real life. 
+            
+            
+            I have achieved my aims for the project by producing an idea for a kirigami themed application from scratch that I developed from into an final product I am proud of. The application has shown to a new audience that kirigami can be a relaxing recreational activity and I hope to inspire the users to physically recreate their favourite designs created via the application in real life.
 
-            I have learnt how to create an iPhone application from scratch to a final product.
-            
             I am grateful to have had the opportunity to undertake this project. I enjoyed the creativity and freedom of control that came with making this it and I plan to publish it on the app store in the future.
             
 
@@ -1152,15 +1140,8 @@ Additional features include the icon, music player, information page etc are exp
             https://git-teaching.cs.bham.ac.uk/mod-msc-proj-2018/sct808
             \item Open "kirigami draft 1.xcodeproj"
             \item Run on an iPhone 8 simmulator. 
-            (It may not be possible to run on your own iPhone without already being an app developer, an account can be created.)
+            (It may not be possible to run on your own iPhone without already being an app developer, however an account can be created.)
       
         \end{enumerate}
-        
-% \begin{figure}[h!]
-% \centering
-% \includegraphics[scale=1.7]{universe}
-% \caption{caption}
-% \label{fig:nameof file}
-% \end{figure}
 
 \end{document}
