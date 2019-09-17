@@ -18,7 +18,7 @@
 
 \begin{document}
 \begin{titlepage}
-    \title{\vspace{40pt}\Huge KiriZen: Creation of an iPhone application in swift based on the art of kirigami}
+    \title{\vspace{40pt}\Huge KiriZen: Creation of an Kirigami Inspired iPhone Application in Swift}
 
     \author{ \\\hline \\\\\\ \Large \vspace{5pt} Author: Stephanie Tindal \\\Large \vspace{5pt}{Student ID: 1936508}\\\Large \vspace{50pt}{Supervisor: Achim Jung} \\ \hline\\\\\\  \vspace{5pt}{MSc Computer Science} \\ \vspace{5pt}{School of Computer Science, University of Birmingham}\\\\\\ \hline\\\\}
 
@@ -152,7 +152,7 @@
                 
             \subsubsection{Snowflake!}
             
-                \paragraph{Type:} iPhone application 
+                \paragraph{Type:} iPhone application %\cite https://apps.apple.com/gb/app/cut-the-snowflake/id782743614
             
                 \paragraph{Description:}
                 Snowflake is an application that allows the user to cut out free-form shapes from either 22.5\textdegree{} segments or 45\textdegree{} segments. The image revealed is a snowflake-like shape as shown in \textbf{Figure~\ref{fig:snowflakeResult}} which is created from the 22.5\textdegree{} segments in \textbf{Figure~\ref{fig:snowflakeSegmentCut}}. 
@@ -208,7 +208,7 @@
             
             \subsubsection{Kirie}
             
-                \paragraph{Type:} iPhone application 
+                \paragraph{Type:} iPhone application %https://apps.apple.com/gb/app/kirie-cut-the-paper/id926021413
 
                 \paragraph{Description:}
                 This application allows the user to draw lines (which are transformed into cuts) on a virtual piece of paper folded in half vertically. The virtual piece of paper is unfolded upon reveal. 
@@ -262,7 +262,7 @@
                 
                  \subsubsection{Handcraft Snowflakes}
             
-                \paragraph{Type:} iPhone application 
+                \paragraph{Type:} iPhone application %https://apps.apple.com/gb/app/handcraft-snowflakes/id1407181083
 
                 \paragraph{Description:}
                 This application uses the character of Peppa Pig throughout. Peppa describes comments on the application which consists of cutting shapes out of a segment of a snowflake. There is gallery available where your snowflakes can be saved. Coins can be collected while using the app or can be purchased. They are redeemed for a new ready made shapes to cut out the snowflake, new background textures/colours for the snowflake paper, or to add a pages in the gallery booklet for saving more snowflakes. 
@@ -358,8 +358,7 @@
         \subsection{Cutting Paper Applications}
             \subsubsection{Paper Cut Craft}
             
-                \paragraph{Type:} iPhone application 
-                 
+                \paragraph{Type:} iPhone application %https://apps.apple.com/gb/app/paper-cut-craft/id1354944519
                  
                  \begin{wrapfigure}{r}{0.25\textwidth}
                     \includegraphics[width=0.25\textwidth]{Images/paperCutCraftCut.png}
@@ -399,7 +398,7 @@
                 
                 \subsubsection{Topetope}
                  
-                \paragraph{Type:} iPhone application 
+                \paragraph{Type:} iPhone application %https://apps.apple.com/gb/app/topetope-cut-the-square/id1050480990
 
                 \paragraph{Description:}
                 "TOPETOPE - cut the square" is an iPhone application that is advertised as a game where the user can cut a square piece of paper and there are cutting challenges that may come with time limits. The application did not appear to be working when tested multiple times with every effort made to troubleshoot it. Most of the application appeared to be inaccessible. 
@@ -607,39 +606,45 @@
 
 \subsection{Requirements}
     
-    Functional Requirements 
+    \subsubsection{Functional Requirements}
     
     \begin{enumerate}
       \item Home Screen
         \begin{enumerate}[label*=\arabic*.]
-        \item The application must allow the users to select a "create Pattern" button or a "Match pattern" button linkin3g them to eh relevant screen
+        \item The application must allow the users to select a "Create Pattern" button or a "Match pattern" button linking them to the relevant screen.
         \item The application could have music playing in the background controlled via a button on the home screen
-        \item The application could have an information page linked from the home screen
+        \item The application could have an information page linked from the home screen.
+        \item The application could have background music controlled via an button on the home page.
       \end{enumerate}
+      
        \item Choose Fold
         \begin{enumerate}[label*=\arabic*.]
-        \item The application must allow the user to choose whether they want the virtual piece of paper folded into 2,4,6 or 8 pieces.
+        \item The application must allow the user to choose whether they want the virtual piece of paper folded into 2, 4, 6 or 8 sections.
       \end{enumerate}
+      
       \item Creating cuts
       \begin{enumerate}[label*=\arabic*.]
-        \item The application must display the corresponding shape of the folded piece of paper depending on which fold was selected.
+        \item The application must display the corresponding shape of the folded piece of paper depending on which fold was selected in the previous screen.
         \item The application must indicate which side(s) are folded via the display of a dashed line(s).
         \item The application must allow the user to tap on screen outside the virtually folded paper to start a cut. 
-        \item The application must allow the user to tap on screen to start a cut. 
-        \item The application must indicate to the user where the start of their cut.
-        \item The application must allow the user to complete their cut by tapping near the start of their cut. 
+        \item The application must allow the user to tap on screen to start a cut.
+        \item The application should indicate to the user where the start of their cut.
+        \item The application should allow the user to complete their cut by tapping near the start of their cut. 
+        \item The application must display the reveal screen upon selection of a corresponding button.  
       \end{enumerate}
-      \item Create Pattern
-        \begin{enumerate}[label*=\arabic*.]
-        \item The application must display a folded
-      \end{enumerate}
+      
       \item Match Pattern
         \begin{enumerate}[label*=\arabic*.]
-        \item 
+        \item The application must display the target image to the user.
+        \item The application must allow the user to attempt to recreate the cut free of help. 
+        \item The application must allow the user to see the target image again from this page. 
+        \item The application should allow the user to select an overlay option for help.
       \end{enumerate}
+
       \item Reveal
         \begin{enumerate}[label*=\arabic*.]
-        \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual peice of paper. 
+        \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual piece of paper. 
+        \item The application must allow the user to compare their pattern with the target pattern when selected via the match pattern section.
         \item The application could allow the user to share their virtual unfolded creation to other applications. 
          \item The application could have a pinch zoom feature for the virtual unfolded creation 
         \item The application could allow the user to save their virtual unfolded creation to their camera roll.
@@ -647,76 +652,65 @@
     \end{enumerate}
 
     
-    1. Learn the basics for creating an iPhone application
-        2. Create an application for iPhone that allows the user to draw cuts into a folded piece of
-        paper
-        2.1. Demonstrate a crease pattern and folding of a square piece of paper into 2
-        2.2. Allow the user to draw cuts into the piece of paper
-        2.3. Reveal the image of the paper unfolded with the cuts made
-        2.4. Repeat for folding the square into 4, 6 (as you cannot fold a piece of paper into 3 or
-        5 layers about a central point) – revealing the unfolded cut versions at the end.
-        3. Add another level to the application which has an unfolded target shape and asks you what cuts are to be made to create this shape. E.g. pentagon is the target shape. The
-        application reveals the square folded into 5 and asks you where the cut should be made. 3.1. A margin of error will have to be programmed into this.
-        3.2. Application will show you the solution once you have tried.
-        4. Additional features
-        4.1. Additional features can be programmed for example changing the colours and
-        shading.
-        4.2. Higher number of folds.
-        4.3. Showing the actual folding/unfolding of the piece of paper in between steps
+   \subsubsection{ Non-Functional}
     
-    
-    
-    
-    
-    
-    
-    
-    Non-Functional
-    Efficiency 
-    
-    Performance
-    The application should respond to the users touch within 0.5 seconds.
-    The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
-    Useability
-        The average user should be familiar with the application after 5 minutes of use. 
-        The average user should be able to understand the flow of app easily.
-        
-        Supportability
-        The application shall be available on iPhone 7,8 ..check
-        
-        Dependability
-        The application shall be availabl
-        
-        The application shall be updated to the latest version 
-        
-        Reliability
-        
-        Availability
-        
-        
-        Maintainability
-Maintainability: This relates to the ease at which your app finds bugs and fixes t
-        
-
+    \begin{enumerate}
+        \item   Performance
+            \begin{enumerate}[label*=\arabic*.]
+            \item The application should respond to the users touch within 0.5 seconds.
+             \item The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
+            \end{enumerate}
+            
+        \item Useability
+            \begin{enumerate}[label*=\arabic*.]
+            \item The average user should be familiar with the application after 5 minutes of use. 
+            \item The average user should be able to understand the flow/navigation of app easily.
+            \end{enumerate}
+            
+        \item Supportability
+            \begin{enumerate}[label*=\arabic*.]
+            \item The application shall be available on iPhone 7,8 ..check
+            \end{enumerate}
+            
+        \item Dependability
+            \begin{enumerate}[label*=\arabic*.]
+            \item The application shall be available
+            \item The application shall be updated to the latest version 
+            \end{enumerate}
+            
+        \item Availability
+            \begin{enumerate}[label*=\arabic*.]
+            \item 
+            \end{enumerate}
+            
+        \item Scalability
+            \begin{enumerate}[label*=\arabic*.]
+            \item The system must be able to accommodate an increasing amount of work. 
+            \end{enumerate} 
+            
+        \item Maintainability
+            \begin{enumerate}[label*=\arabic*.]
+            \item %This relates to the ease at which your app finds bugs and fixes.
+            \end{enumerate}
+         
+    \end{enumerate}
 
     
-    \subsection{Creating Kirigami}
-            \paragraph{}
-            \subsubsection{Choose Fold}
+    \subsection{Overview}  
+    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly.
+    
+            \subsection{Choose Fold}
                 \begin{wrapfigure}{r}{0.25\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/chooseFold.png}
                         \caption{Icon}
                         \label{fig:kiriZen-chooseFold}
-                    \end{wrapfigure}
+                \end{wrapfigure}
                     
-            Main screen
+            \subsubsection{Segue}
+            In the storyboard I assigned a tag with each buttons in choose fold depending on how many folds they were associated with. In the storyboard also added segues from each button to the next view controller. Segues are transitions between view controllers which can be named. In the class "ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable (buttonPressed) to the value of the tag. This information is then carried to the next view controller using prepare for segue function.
             
-            Music and Info discussed later on in additional features (x.x.x.)
-            Navigation bar
-          
-            \paragraph{Segue}
-                I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. 
+            The use of tags and segues is important as the button pressed in choose fold determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers and determines how it will be transformed and revealed.
                 
             \subsection{Create Pattern}
              \begin{wrapfigure}{l}{0.25\textwidth}
@@ -725,15 +719,26 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
                         \caption{Icon}
                         \label{fig:kiriZen-createPattern}
                     \end{wrapfigure}
-            \paragraph{Canvas}
+                    
+                \paragraph{} 
+                Create Pattern VC
+                Layout Buttons, point to functions (Undo and Clear… expanded functionality with research)
+                Segue to instructions … next page
+                Link to Canvas
 
-            % \begin{wrapfigure}{r}{0.25\textwidth}
-            %             \centering
-            %             \includegraphics[width=0.25\textwidth]{KiriZen/icon.png}
-            %             \caption{Icon}
-            %             \label{fig:icon}
-            %         \end{wrapfigure}
-        
+
+            \subsection{Canvas}
+            
+            Canvas - UIView
+            Info from Create Pattern VC buttons for shape to draw (CA Shape Layer / Draw)
+            Dashed line – redraw on top (bring to top)
+            Functionality of iphone
+            Tap location
+            Get pixel colour
+            Compare pixels
+            To create shapes: circle, path and shape array and tap count
+            
+            
 
             \paragraph{} 
       
@@ -753,10 +758,23 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
         \subsubsection{Transformation}
         
                 \paragraph{}
+                
+                Transformations
+                Scale
+                Refelctions
+                Rotations
+                Masks
+
+
 
     \subsection{Match Pattern}
 
-    \subsubsection{Target Shapes}
+        \subsubsection{Target Shapes}
+            
+            Start Button
+             Randomly Generate Numbers
+             Named images
+
     
             \paragraph{}
             \begin{figure}[!ht]
@@ -773,9 +791,27 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
                         \end{minipage}
                     \end{figure}
                     
-        \subsubsection{Inheritance}
+        \subsubsection{Match Create}
     
             \paragraph{}
+            
+            Inheritance 
+            Segue carries over target image numbers
+            Target Button
+            Overlay Button - alert
+            Options
+            Yes Counter – if they want to see it
+            Reveal Button Segue
+
+ \subsubsection{Reveal Match VC}
+    
+            \paragraph{}
+Inheritance
+Target Button
+Target Overlay – alpha 0.7
+
+
+
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
                             \centering \includegraphics[width=0.7\linewidth]{KiriZen/overlayPopUp.png}
@@ -799,6 +835,8 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
                         \label{fig:kiriZen-matchUnfoldedPattern}
                     \end{wrapfigure}
       
+
+
 \clearpage
 \newpage
 \section{Human Computer Interaction}
@@ -814,7 +852,13 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
 
         \subsection{Additional Features}
             \paragraph{}
-        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete and consistent experience for the user. Additional features include the icon, music player, information page etc are explained below. 
+        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete and consistent experience for the user.
+        
+%         Creating interesting target patterns
+% Zoom pinch on final pattern
+
+
+Additional features include the icon, music player, information page etc are explained below. 
         
          \subsubsection{Graphics}
                 \paragraph{}
@@ -898,7 +942,7 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
                         \begin{minipage}{0.45\textwidth}
                             \centering
                             \includegraphics[width=0.7\linewidth]{KiriZen/info.png}
-                            \caption{The information page linked from the info button in \textbf{Figure~\ref{fig:kiriZen-main}}.}
+                            \caption{The information page linked from the info button in \textbf{Figure~\ref{fig:kiriZen-main}}.\\\\}
                             \label{fig:kiriZen-info}
                         \end{minipage}
                     \end{figure}
@@ -975,7 +1019,7 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
         
         I would need to decide if I would like to make the app paid or free, and if I should include advertisements. I believe a free app is more appropriate, especially for the target users and I myself would prefer an unpaid application. However as discussed in background research I would need to make sure the advertisements do not disrupt the user experience. As my goal is to create an application that is relaxing for users to use and not to make money, I could consider taking away all advertisements and making the app completely free.
         
-        I would need to test this on a greater variety of users to see if I have fully achieved what I aimed for with this application as it was mostly my peers.  I can publish the application as test version to get user feedback on websites such as TestFlight. %cite
+        I would need to test this on a greater variety of users to see if I have fully achieved what I aimed for with this application as it was mostly my peers.  I can publish the application as test version to get user feedback on websites such as TestFlight. %citehttps://developer.apple.com/testflight/
         I could then check the user reviews and make an appropriate edits if necessary. 
         
         Before publishing this on the app store, I can incorporate seasonal marketing if near Christmas. For example e.g. extra snowflake designs for the target patterns and snowflake animations / wallpapers to attract users.
@@ -989,7 +1033,9 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
         \paragraph{}
         using inheritance ... 
          flexibility, scalability, feasibility, reusability, and security into a structured solution
-         Refactoring, common buttons, canvas, reveal. 
+         Refactoring, 
+         common buttons - consistency
+         canvas, reveal. 
         
         \paragraph{}
         While creating making smaller methods
@@ -1025,7 +1071,7 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
         
                 \paragraph{}
                 
-                Animation of folds
+                Test out what I found from the heuristics. Time constraint in this case. 
                 
                 Higher number of folds - 10, 12...
                 
@@ -1034,8 +1080,26 @@ Maintainability: This relates to the ease at which your app finds bugs and fixes
                 
                 Algorithms for comparing target images to the image the user created 
                 
-                Wallpaper
+                Wallpaper - repetitive pattern - will be easier having created and understood  reveal section. 
                 
+                
+                
+
+%                 Challenges:
+% Learning swift
+% Xcode – notoriously buggy
+% Unfamiliar with how code works in real time interactions & memory available
+% Creating the entire process from back end to front end in a highly visual app
+
+% Improvements throughout 
+% Watching others interact with my app:
+% Turned into an app that is meant for relaxing 
+% Added instructions, then used animations rather than instructions
+% Added additional functionality to undo and clear buttons
+
+
+
+
 \newpage
 \section{Conclusion}
         
