@@ -13,6 +13,8 @@
 \usepackage[margin=0cm]{caption}
 \captionsetup[figure]{labelfont={bf},name={Figure},font=footnotesize}
 \usepackage{multicol}
+\usepackage{enumitem}
+
 
 \begin{document}
 \begin{titlepage}
@@ -23,12 +25,12 @@
     \date{September 2019 \vspace{20pt}}
     \maketitle
 \end{titlepage}
-\begin{frame}{}
-    \begin{multicols}{2}
+% \begin{frame}{}
+%     \begin{multicols}{2}
     \tableofcontents
 
-\end{multicols}
-\end{frame}
+% \end{multicols}
+% \end{frame}
 
 \newpage
 
@@ -46,89 +48,76 @@
 \newpage
 \section{Introduction}
 
-        \subsection{A Brief History of Origami and Kirigami}
+        \subsection{A Brief Introduction to Origami and Kirigami}
         
             \paragraph{}
-            Origami is the art of folding paper. One of its earliest depictions was the folding of an ancient Egyptian map made from papyrus. Upon the invention of paper, paper folding was used mainly in religious ceremonies due its high price. There are examples of paper folding across many cultures therefore it is difficult to say where and when it was invented. In japan paper folding was popularised 
-            % \cite{origami bible stuff}
-            kirigami
-            in Japanese, "kiri" means "to cut"
-            \cite{Temko2004kirigami}
+            Origami is the art of folding paper. One of its earliest depictions was the folding of an ancient Egyptian map made from papyrus. Upon the invention of paper, paper folding was used mainly in religious ceremonies due its high price. There are examples of paper folding across many cultures therefore it is difficult to say where and when it was invented. % \cite{origami bible stuff} 
+            
+            After folding paper became popular, cutting followed. Cutting paper is also transcends across many cultures. Scherenschnitte is the German and Swiss art of cutting paper which produces intricate silhouettes. %https://www.nytimes.com/2016/11/27/fashion/craft-scherenschnitt-switzerland.html
+            Papel picado (perforated paper" is created in Mexico and hung in the streets as banners for celebration
+            %https://www.papercutters.org/aboutpapercutting
+            and paper cuttings are created for the jewish holiday shavuot. %https://www.cjnews.com/perspectives/opinions/shavuot-paper-cutting
+            
+            
+            Kirigami in addition to origami includes cutting the paper. In Japanese, "kiru" means "to cut"
+            \cite{Temko2004kirigami} and "kami" means paper %https://www.wordhippo.com/what-is/the/japanese-word-for-950593b1f42de841169aa7d59486b7e980bc15cf.html.
+            . Florence Temko evolved the word to become "kirigami" in 1962 who's book "Kirigami, the Creative Art of Papercutting" became so popular that the word became synonymous with cutting paper. %\cite{https://www.origami-resource-center.com/kirigami.html..
           
-            Kirigami in addition to origami includes cutting the paper. 2 
-            Houdini 
+          Kirigami was also first used in religious ceremonies in japan and is still used today in many religious festivals and recreationly.
+          https://www.kyuhoshi.com/2014/11/kirigami/
+           
+           
+           The famous magician Harry Houdini describes many origami and kirigami designs in his book Paper Magic. Such as folding a square piece of paper and making a five pointed star with a single cut. % /citebook.
+           
+           
+           Today kirigami is used as a recreational activities and commonly across all cultures at Christmas to make snowflakes.
     
             \subsubsection{Relevance}
                 \paragraph{} 
-                Although paper folding used to be used in mostly religious contexts, origami has become more recreational in nature. 
-            
-                \paragraph{} 
-                Origami and kirigami are now seen in pop-culture and art galleries. 
-                %star wars
-                %fashion
-                %articles
-                %books
-                I learnt origami and kirigami from Chinese and Japanese students my grandmother hosted when I was younger and remember searching for books in the UK but not being able to find them in any libraries in my hometown. Now these types of books are widely available in most bookshops and libraries sometimes which entire sections dedicated to them. This increase in popularity or origami and kirigami.
-            
-                In addition to this,  origami and kirigami 
-            
-            
-                % \cite{origami bible stuff}
-    
-                In recent years
-            
-                relaxation and mindfulness activities and applictions growing in popularity and including all ages such as adult colouring books, origami packs, head space applicatoin, 
+                Origami and kirigami are becoming more common in pop-culture. 
                 
-        
-        \subsection{Idea Conception}
+                Fashion has been inspired by kirigami illustrated with Nida Azwer's entire collection dedicated to Kirigami at Fashion Pakistan Week 2016 
+                                %http://highlifeshenanigans.com/2016/04/kirigami-by-nida-azwer.html
+
+                and Alexandra Verschueren won the L'Oréal Professional Grand Prize at the Hyères International Festival of Fashion and Photography with her unique innovative designs inspried by kirigami.  %https://www.vogue.it/en/talents/graduated-from/2010/04/alexandra-verschueren?refresh_ce=#ad-image9229
+                
+                Nahoko Kojima is a kirigami artist who has had her collections displayed in numerous locations worldwide most recetly in the Dulwich Picture Gallery in London featuring a 8.5m crocodile. %http://www.nahokokojima.com/galleries-overview/
+                Kanako Yaguchi is another artist that will have her 2019 kirigami exhibition displayed in Tokyo %http://www.yorokobinokatachi.com/2019ex/index.html
+                
+                In addition, Marc Hagan-Guirey is a paper artist who gained popularity with the creation of the Star Wars kirigami book which displays how to create models inspired by the movie. %http://www.paperdandy.co.uk/star-war-kirigami-book
             
-                    \paragraph{} 
-                        Having been a keen creator of origami from the age of 4, it was suggested by one of my professors that I create an application that involves origami. Upon discussion with my supervisor we decided the focus should be on kirigami - a branch of origami which involves cutting as well as folding the paper as this can be a 2D application. The decision was made to have two aspects of the app - creation and trying to create a given pattern. As discussed above, the popularity of kirigami is growing as is the popularity of relaxing head space apps. I only found a handful of apps - discussed in the background research later on - focused on kirigami on the app store therefore I believe there is a place for the app I have created and the market is not over saturated. 
-                        
-                        \subsection{Swift}
-               
-                \paragraph{} 
-                    I decided to create an iPhone application as this was an area of coding I had not yet explored and was keen for the challenge of a new language. To create an iPhone application, Swift is a common language to use with some Objective-C still being used on occasion.  
-                    Xcode is the integrated development environment (IDE) used for Swift.
-        
-                \subsection{Project Aim}
+                Kirigami is also utilised in a scientific context. The cuts and folds of kirigami can be used to turn 2D structures into 3D structures that do not cause materials to fracture and allow some elasticity therefore these structures can be used to create membranes of silicon, metal for nanostructured biomedical devices. %https://www.pnas.org/content/113/2/240
+                
+                
+               Recently a medical device has been created which is essentially a  plastic ribbon that is sliced with cuts inspired from kirigami which allow it to twist. These twists in turn revealed microscopic twists in tissue that can be used to identify biological tissues when radiation was guided thorough these ribbons. %https://www.futurity.org/kirigami-terahertz-radiation-imaging-2099242-2/
+               These examples show how kirigami can be creatively used to produce innovative devices.
+                
+                In recent years relaxation and mindfulness activities and applictions growing in popularity and include all ages. Such activities to reduce stress include adult colouring books, origami packs, head space applications. This has lead me to the idea of creating a kirigami themed application for the purpose of creativity and relaxation.
+    
+            \subsection{Project Aim}
             
                  \paragraph{} 
-                 %                  The aim of the project is to create an application in which users can create cuts in a virtually folded sheet of paper and the application will reveal the unfolded pattern to them upon the click of a button. The application will 
                  
-                 %                  The next level will allow the users to try and imagine how to cut the shape that is shown from the folded piece of paper.
+                  Having been a keen creator of origami from the age of 4, it was suggested by one of my professors that I create an application that involves origami. Upon discussion with my supervisor we decided the focus should be on kirigami. 
+                  
+                  The aim of the project is to create an application in which users can create cuts in a virtually folded sheet of paper and the application will reveal the unfolded pattern to them upon the click of a button. The application will have another half which prompts the users to match a target pattern. The user will need to imagine how to cut the target shown from the folded piece of paper.
+                  
+                  The paper should in both half of the application can be folded into an even number of folds (2, 4, 6 or 8).
+                  
+                  As discussed above, the popularity of kirigami is growing as is the popularity of relaxing head space apps. I only found a handful of apps - discussed in the background research later on - focused on kirigami on the app store therefore I believe there is a place for the application and the market is not over saturated.
                  
-                 % The application will have to be virtually appealing and
-
-
-                % • Relevance: The app will allow users to train their 3D imagination by interacting with the application. 
-                
-                % In addition to the application itself, users can mimic the patterns created in real life increasing their creativity.
-                
-                %                  1. Learn the basics for creating an iPhone application
-                % 2. Create an application for iPhone that allows the user to draw cuts into a folded piece of
-                % paper
-                % 2.1. Demonstrate a crease pattern and folding of a square piece of paper into 2
-                % 2.2. Allow the user to draw cuts into the piece of paper
-                % 2.3. Reveal the image of the paper unfolded with the cuts made
-                % 2.4. Repeat for folding the square into 4, 6 (as you cannot fold a piece of paper into 3 or
-                % 5 layers about a central point) – revealing the unfolded cut versions at the end.
-                % 3. Add another level to the application which has an unfolded target shape and asks you what cuts are to be made to create this shape. E.g. pentagon is the target shape. The
-                % application reveals the square folded into 5 and asks you where the cut should be made. 3.1. A margin of error will have to be programmed into this.
-                % 3.2. Application will show you the solution once you have tried.
-                % 4. Additional features
-                % 4.1. Additional features can be programmed for example changing the colours and
-                % shading.
-                % 4.2. Higher number of folds.
-                % 4.3. Showing the actual folding/unfolding of the piece of paper in between steps
-                 
+                  \subsection{Swift}
+               
+                \paragraph{} 
+                    I decided to create an iPhone application as this was an area of software development I had not yet explored and was keen for the challenge of a new language. To create an iPhone application, Swift is a common language to use with some Objective-C still being used on occasion and Xcode is the integrated development environment (IDE) used for Swift. To pick up the language I started a udemy course %(https://www.udemy.com/ios-13-app-development-bootcamp/learn/lecture/10929408?start=0#overview)
+                    to learn the basis of the language and how to utilise Xcode. I predicted some difficulties as I was not familiar with front end coding and many of the methods have different names to those in java. 
 
 \newpage
 \section{Background Research}
 
         \subsection{Kirigami-like Applications}
            \paragraph{}
-            I searched for applications on the web and iPhone app store with a theme that centered around creating kirigami. I wanted to gain an insight into what is already out there to make sure my idea was unique, and to evaluate the strengths and weakness of the other apps as a user and learn from them before I design my own app. 
+            I searched for applications on the web and iPhone app store with a theme that centered around creating kirigami. I wanted to gain an insight into what is already available to ensure my idea was unique, and to evaluate the strengths and weaknesses of the other apps as a user and learn from them before began designing my own app.
         
             \subsubsection{Paper Snowflake Maker}
             
@@ -143,7 +132,7 @@
                     \end{figure}
                     
                 \paragraph{Strengths:}
-                It is clear how to make cuts in the virtual folded piece of paper as soon as you start clicking on it, as seen on the right panel in \textbf{Figure~\ref{fig:paperSnowflakeMaker}}. The green and red dots that appear as you click are clear indicators for the progression of the cut.
+                It is clear how to make cuts in the virtually folded piece of paper as soon as you start clicking on it, as seen on the right panel in \textbf{Figure~\ref{fig:paperSnowflakeMaker}}. The green and red dots that appear as you click are clear indicators for the progression of the cut.
                 
                 The auto update button is a convenient feature as the user does not have to click the "make snowflake!" button every time a new shape is cut. 
                 
@@ -156,10 +145,10 @@
                 
                 The cuts that can be made on this virtual snowflake are much more complex than those which can recreated on a real piece of paper, this slightly takes away from the sense of realism indicated by the accurate shadows of the folds. The smaller pieces that are created in \textbf{Figure~\ref{fig:paperSnowflakeMaker}} would fall off after being severed from the main larger component also contrasting the realism.
                 
-                The save image to your computer button opens another window explaining how to save the image (using "Save Image As...") which is unnecessary and ironically the user is not able you to save the image on their computer via this pop-up window. Copying the image produced a low resolution image as does saving the image straight from the original screen. In addition the "share image on Facebook button does not work."
-                
+                The save image to your computer button opens another window explaining how to save the image (using "Save Image As...") which is unnecessary and ironically the user is not able to save the image on their computer via this pop-up window. Copying the image produced a low resolution image, as does saving the image straight from the original screen. In addition, the "Share image on Facebook" button does not work.
+            
                 \paragraph{Lessons Learned:}
-                The cutting is intuitive for this web application - I can consider this approach when developing my own cutting method. The overall look of the application is clean, however the buttons on the side and instructions could be updated for a more modern feel and possibly rearranged. Buttons that do not provided the intended functionality should be discarded (such as the save image button).
+                The cutting is intuitive for this web application - I can consider this approach when developing my own cutting method. The overall look of the application is clean, however the buttons on the side and instructions could be updated for a more modern feel and possibly rearranged. Buttons that do not provided the intended functionality should be discarded (such as the "Save image to your computer" button).
                 
             \subsubsection{Snowflake!}
             
@@ -193,7 +182,7 @@
                 
                 The area of the screen dedicated to the main function of creating cuts from a segment of the final shape consists of a very small portion of the screen. The ratio is especially low when cutting from the 22.5\textdegree{} segments as seen in \textbf{Figure~\ref{fig:snowflakeSegmentCut}}.
                 
-                The shape that is cut from the shape drawn is not always as expected. For example in \textbf{Figure~\ref{fig:snowflakeSegmentCut}} this does not reflect the cut you would expect from the free-form shape drawn by the user in \textbf{Figure~\ref{fig:snowflakeOutline}}.
+                The shape that is cut from the shape drawn is not always as expected. For example in \textbf{Figure~\ref{fig:snowflakeOutline}} this does not reflect the cut you would expect from the free-form shape drawn by the user in \textbf{Figure~\ref{fig:snowflakeCut}}.
                
                 On the share bar seen in the centre of \textbf{Figure~\ref{fig:snowflakeResult}}, the "Send to a friend!" button has exactly the same response as the "E-Mail" button. It is also slightly  misleading as I would expect this button to create a message via WhatsApp or iMessage rather than email if sending to a friend. The upload icon button allows the user to create a "Happy new year" themed postcard and when the "Send" button is pressed, the pop-up disappears leaving the user with no idea where the image they just created was saved or sent unlike with the buttons that do work - the user is sent to the relevant email or social media screen. The same situation occurs when the twitter button (icon of a bird) is pressed - no response occurs after the "Send" button is pressed.
                 
@@ -225,7 +214,7 @@
                 This application allows the user to draw lines (which are transformed into cuts) on a virtual piece of paper folded in half vertically. The virtual piece of paper is unfolded upon reveal. 
 
                 \paragraph{Strengths:}
-                The majority of the screen is used when creating the cut. This allows you to make intricate cuts and the overall feel of the app is minimalist and clean. 
+                The majority of the screen is used when creating the cut. This allows you to make intricate cuts and the overall feel of the app is minimalistic. 
                 
                 The option to load an image from the users library to cut from is available to either cut from, or to use as a background image behind the cuts.
                 
@@ -233,13 +222,13 @@
                     \centering
                     \includegraphics[width=0.25\textwidth]{Images/kirieMain.PNG}
                     \captionsetup{{margin = 0.2cm}}
-                    \caption{The home screen of the kirie app. The three buttons at the bottom of the scree do not provide their functionality or cause the app to crash. Only the "Cut" button has the expected action of taking the user to the next screen.}
+                    \caption{The home screen of the kirie app. The three buttons at the bottom of the scree do not provide their proposed functionality or cause the app to crash. Only the "Cut" button has the expected action of taking the user to the next screen.}
                     \label{fig:kirieMain}
                 \end{wrapfigure}
                 
                 
                 \paragraph{Weaknesses:}
-                On the in initial screen (seen in \textbf{Figure~\ref{fig:kirieMain}}), only the "Cut" button works. It is also not very clear that the "Cut" button is a button as could be  mistaken for a logo especially as the other buttons of the screen are of a different format. There is also no highlight or shading response for the button which in this case when the reaction to the button is slow, can indicate to the user that it is in deed not a button as there is no response shown within a regular period of time. If the "download" button is pressed, the app crashes and closes. If the "How to" button is pressed, there is no response from the app. If the "user" button is pressed, a pop up shows ups prompting a username. With any input the application closes the popup and returns to the same screen as before - there also appears no way to sign up or login. It should also be noted that the captions for the buttons do not have consistent capital letters to start ("How to" does, the other buttons do not), a minor flaw that shows lack of attention to detail.
+                On the in initial screen (seen in \textbf{Figure~\ref{fig:kirieMain}}), only the "Cut" button works. It is also not very clear that the "Cut" button is a button as could be  mistaken for a logo especially as the other buttons of the screen are of a different format. There is also no highlight or shading response for the button which in this case when the reaction to the button is slow, can indicate to the user that it is not a button as there is no response shown within a regular period of time. If the "download" button is pressed, the app crashes and closes. If the "How to" button is pressed, there is no response from the app. If the "user" button is pressed, a pop up shows up prompting a username. With any input the application closes the popup and returns to the same screen as before - there also appears no way to sign up or login. It should also be noted that the captions for the buttons do not have consistent capital letters to start ("How to" does, the other buttons do not), a minor flaw that shows lack of attention to detail.
                 
                 On the finished cut screen shown in \textbf{Figure~\ref{fig:kirieCut}} the save icon button does not save the image anywhere despite a conformation pop-up. It is unclear what the functionality of the picture icon button is as the cuts have already been finalised. The upload icon results in a conformation pop-up (saying the image has been uploaded) but no upload has actually occurred - the user was not even asked where they would like the image to be uploaded. 
                 
@@ -266,7 +255,7 @@
                 
                 The cuts created do not have to be closed shapes resulting in unexpected shapes being created after the user confirms the cut. The application should restrict the user to only creating closed shapes as that would allow the user to predict where the cuts would be made resulting from their line. When the cuts are mirrored, the resolution of the image of the cuts decreases.
                
-                If the functionality of the buttons causes the application to crash, this is a major error and is unacceptable for any application. All buttons should be thoroughly tested throughout creation of my application. There could be conformation pop-ups in my application but only when the functionality works unlike in "kirie". 
+                If the functionality of the buttons causes the application to crash, this is a major error and is unacceptable for any application. All buttons should be thoroughly tested throughout creation of my application. There could be conformation pop-ups in my application but only when the functionality works unlike in "kirie".
                 
                 Overall the usefulness of the app is questionable as it just reflects the cuts in the y-axis and there is no other refection or folding option. Additional features that add little to the app and are not completely necessary or relevant should not be implemented. Any non-core features should be added after the main functionality of the application works well. The variety of tasks to do in the app is very limited.
                 
@@ -295,7 +284,7 @@
                 
                 The commentary by Peppa pig does not contain much helpful information on how to use the app, it merely states the obvious such as "Lets start making a snowflake". The characters name is not in the title for the application, this means there is less exposure to the Peppa pig audience.
                 
-                After selection of a language, the language is inconsistent throughout the application. For example no matter which language you pick, the title for some sections - for example the colour picker - is always displayed in Russian as seen in \textbf{Figure~\ref{fig:peppaRussian}}.  As the application is clearly aimed for children this may be confusing for them.3
+                After selection of a language, the language is inconsistent throughout the application. For example no matter which language you pick, the title for some sections - for example the colour picker - is always displayed in Russian as seen in \textbf{Figure~\ref{fig:peppaRussian}}.  As the application is clearly aimed for children this may be confusing for them.
                 
                 There is a black loading page before every screen is displayed which stops the flow of the app and makes the app feel slow.
                 
@@ -359,36 +348,54 @@
                 The main problem with the application is the assumed knowledge of the buttons. For example, it is unclear what the buttons with snowflakes on them in \textbf{Figure~\ref{fig:peppaMain}} and \textbf{Figure~\ref{fig:peppaGlitchPoint}} will do. They appear to allow the user to drag snowflakes onto the window in the background, however it is difficult to use so the functionality is unclear. The left facing arrow button on the main screen shown in \textbf{Figure~\ref{fig:peppaMain}} will take the user back to the previous screen. This navigation to a previous screen is a common action for the left arrow button. However on the free-form cut screen shown in \textbf{Figure~\ref{fig:peppaFreeFormCut}}, pressing the left arrow button will undo the shape the user has just cut.
                  On shape cutting screen, there is no undo option for cuts made. There is lack of consistency with the image of the button making use of the application unnecessarily complex.
                 
-                The adverts are very intrusive to the user experience and even when on mute, the animation of Peppa pig still continues to animate speaking. The user cannot skip this section and the animation still continues to speak when the mute button within the application or on the phone itself is activated. A pop up (\textbf{Figure~\ref{fig:peppaPopUp}}) occurs if a button is pressed which will exit the user from the cutting screen, however it is unclear which button to press to continue working on the shape or to discard it and the pop-up occurs very frequently while using the application as multiple buttons activate it which is also disruption. 
+                The adverts are very intrusive to the user's experience. The animation still continues to speak when the mute button within the application or on the phone itself is activated, the user cannot skip the animation. A pop up (\textbf{Figure~\ref{fig:peppaPopUp}}) occurs if a button is pressed which will exit the user from the cutting screen, however it is unclear which button to press to continue working on the shape or to discard it and the pop-up occurs very frequently while using the application as multiple buttons activate it which is also disruption. 
                 
                 The name of the application is too long for the icon, therefore you cannot see the entire name of the app on iPhone screen only "Handcraft:S...".
                 
                 \paragraph{Lessons Learned:}   
-                Additional features such as sound, language and animation should not take away from the application experience, only enhance it and only when the core features work as this is more important. Using images for buttons is tricky, it is done well in some cases, e.g. fig x but not in others, e.g fig y. The buttons should have clear functionality and clear if the images are buttons that can be interacted with or not - unlike in fig z. 
+                Additional features such as sound, language and animation should not take away from the application experience, only enhance it and only when the core features work well already as this is more important. Using images for buttons is tricky, it is done well in some cases, e.g. the colour picker button uses a paint palette in \textbf{Figure~\ref{fig:peppaShapes}} but not in others, e.g in \textbf{Figure~\ref{fig:peppaMain}} it is unclear what the buttons with a snowflake on them do. It should be clear if you can interact with images throughout the application. Consistency with buttons is key.
                 
         \subsection{Cutting Paper Applications}
-            \subsubsection{PaperCutCraft}
+            \subsubsection{Paper Cut Craft}
             
                 \paragraph{Type:} iPhone application 
                  
-                \paragraph{Description:} This application is for cutting paper
-
+                 
+                 \begin{wrapfigure}{r}{0.25\textwidth}
+                    \includegraphics[width=0.25\textwidth]{Images/paperCutCraftCut.png}
+                    \captionsetup{{margin = 0.2cm}}
+                    \caption{This is a typical level in Paper Cut Craft. The line down in this figure results in the cut shown in \textbf{Figure~\ref{fig:paperCutCraftReveal}}.}
+                    \label{fig:paperCutCraftCut}
+                \end{wrapfigure}
+                
+                \paragraph{Description:} This application is for cutting a piece of paper into the target shape. 
+                
+                
                 \paragraph{Strengths:}
-                There is a large amount of progression that can be had in the application with opportunity for
+                The cutting feature can be quite realistic at times. The line follows the users touch and is generally quite smooth. After a cut is made, the paper has an animation where the cut half falls off which is a good additional feature.
                 
                 \paragraph{Weaknesses:}
-                While using the app, on occasion the cutting action stops working. The app creates a line representing a cut as usual, but it does not result in the paper being cut. After this occurs, there is no way to progress in the app even if the refresh button is used. There is another glitch where only the thin line drawn (e,g, figure a) is cut from the screen rather than the entire section of paper the user would expect to be cut from their trace as before. 
-                It is unclear how to complete a level, the initial idea appear to cut but in order to get a score, you must press the forward triangle button "this is usually associated with a "play" feature which can be confusing to the user. 
-                The shadow illusion can also be "cut off" breaking the illusion of the point of the shadow. 
+                While using the app, on occasion the cutting action stops working. The app creates a line representing a cut as usual, but it does not result in the paper being cut. After this occurs, there is no way to progress in the app even if the refresh button is used. There is another glitch where only the thin line drawn is cut from the screen rather than the entire section of paper the user would expect to be cut from their trace as before. 
+                It is unclear how to complete a level, the initial idea appear to cut but in order to get a score, you must press the forward triangle button as seen in the top of \textbf{Figure~\ref{fig:paperCutCraftCut}} which is usually associated with a "play" feature which can be confusing to the user. 
                 
-                It is actually quite difficult to trace a thin line on this app as their finger is in the way
+                The shadow around the paper can also be "cut off" breaking the realistic illusion of the shadow.
                 
-                The triangle button - the center button seen in fig a and b - means both finish the cut you are on, and move when the sa seen in figure c.  
+                The application penalises the smallest diversion from the line - this is reflected as a low score produced once the user has completed the level. It is actually quite difficult to draw a thin line on this app that fits to the target pattern precisely as the users finger is in the way as they trace. There are two scores shown once the user has finished the level - score and star rating - it is unclear what these are referring to. 
                 
-                It is difficult to see what criteria there is for the accuracy rating as you use the aplication. 
-
+                 \begin{wrapfigure}{r}{0.25\textwidth}
+                \includegraphics[width=0.25\textwidth]{Images/paperCutCraftReveal.png}
+                    \captionsetup{{margin = 0.2cm}}
+                    \caption{This is actually the opposite of what is required. The application decides which part of the paper disappears, the user will not know until after the cut is made.}
+                    \label{fig:paperCutCraftReveal}
+                \end{wrapfigure}
+                
+                The shopping basket icon actually refers to the link back to the main selection screen, however this is not clear as the shopping cart implies a section that is purchase only. 
+                
+                The variety of shapes available to cut is not particularly entertaining - it appears the shape of a cat is the most complex on the application.
                 
                 \paragraph{Lessons Learned:}
+                
+                It is important to have an engaging application. The levels in my application should have variety and complexity and inspire the user. It should be clear how a user ends a level and returns to the home screen.
                 
                 \subsubsection{Topetope}
                  
@@ -434,7 +441,7 @@
                 In contrast to Topetope, the application I create should have a clear and obvious goal. A tutorial may be necessary as this would have been useful in this case. My application should be thoroughly tested at each stage and needs to reliably work throughout. This is especially important due to the relaxing mindfulness component of my application. Another aspect to consider is if the user is cutting the paper, with Topetope is not clear which side of the paper will be disappearing after it is cut. I need to make this decision clear if I am making it for the user, or allow the user to choose for themselves. 
 
 
-       \subsection{Take home from reviewing other applications}
+       \subsection{Overall Lessons from Other Applications}
        
             \paragraph{}
             Searching for web applications as well of iPhone apps turned out to be a useful path as Paper Snowflake Maker was the only application where the cutting action worked reliably.
@@ -456,34 +463,53 @@
 \newpage
 \section{Prototype}
 
-    \subsection{Requirements}
-
-        \paragraph{}
-
     \subsection{Target User}
     
             \paragraph{}
-            Similar to the target audience for origami and kirigami
-            no specific age
+            Similar to the target audience for origami and kirigami there is no specific target age. I have highlighted a few key groups below. 
             
-            outline applicable to each age
-            kids
-            young professionals 
-            elderly generation 
-            Application can be interacted in a short period of time, ideal for commuting. Mindfulness 
+            \paragraph{Children}
+            This application is especially beneficial for children. Visualising how the shapes they are creating will unfold, or how the shapes already created can be created from a single folded component, they will practice mathematical skills such as geometry, fractions and spacial awareness.
             
+            In addition, the application can be used to enhance the children's creativity and encourage them to try the creations they made on the application in real life. 
+            
+            \paragraph{Young Professionals and Adults}
+            An advantage of the application is that you can spend as little or as much time as you like interacting with it. This can be ideal for commuting where the application's mindfulness aspect can be utilised while on public transport.
 
-    \subsection{Wire Frames}
-    Initially I created sketches of screen for the first generation prototype and used the application "POP - Prototyping on Paper" to make the sketches interactive and test it out on potential users. The users can click on buttons to link them  to the next screen as seen in fig x %cite
-    
-        POP images
+            \paragraph{Elderly}
+            The elderly can use the application to visualise as the children would, and could help them practice fine touch and co-ordination. It will prove stimulating to consider 2D shapes in an interactive way. 
+            \clearpage
+            
+            \subsection{First Generation}
+                    
+                \paragraph{}
+                Initially I created sketches of screen for the first generation prototype and used the application "POP - Prototyping on Paper" %\cite 
+                to make the sketches interactive. The application allows you to create links from one page to the other for specified areas of the sketch. This allows the user to essentially click on buttons to link them to the next screen as seen in \textbf{Figure~\ref{fig:popLinks}}. I linked the screens shown in  \textbf{Figure~\ref{fig:popMultiple}} via the relevant buttons so the user can walk through the application as if they were using it.
+                
+                I used this POP application to test my prototype out on potential users. The feedback was mainly positive, especially as wire frames are not commonly interactive which allowed for a more authentic user experience. The diagrams were clear so it was easy for the user to understand what was going on and the concept of the app even with just links to the different pages as the interactivity.
+                Link to my specific POP application: 
+                
+                \begin{figure}[!ht]
+                        \begin{minipage}{0.45\textwidth}
+                            \centering \includegraphics[width=0.7\linewidth]{Images/popLinks.PNG}
+                            \caption{This figure illustrates how links are made in the POP application to other pages of the app.}
+                            \label{fig:popLinks}
+                        \end{minipage}\hfill
+                        \begin{minipage}{0.45\textwidth}
+                            \centering
+                            \includegraphics[width=0.7\linewidth]{Images/popMultiple.PNG}
+                            \caption{All the screens I created for my first generation prototype and linked together in the POP application.}
+                            \label{fig:popMultiple}
+                        \end{minipage}
+                    \end{figure}
+                    
+                The feedback included suggestions such as relevant titles for pages or no titles for some pages. The home button on every page is unnecessary as the app does not have a large number of screens. Undo and clear buttons should be included when creating the cuts. A save or share button could potentially be included for the unfolded pattern.
+                 
+            
+    \subsection{Second Generation}
 
-    Feedback was mainly positive, especially as wire frames are not commonly interactive, this allowed for a more authentic experience for the user. The diagrams were clear so it was easy for the user to understand what was going on and the concept of the app even with just links to the different pages as the interactivity.
-    More relevant titles for pages or no titles for some pages. Home button on every page is unnecessary as the app does not have a large number of screens. Share button could potentially be included. Undo and clear buttons should be included when creating the cuts. 
-    
-    
-    After collating the feedback, I translated the sketches to generation two prototypes on balsamiq which I was familiar with as I used them on projects throughout the year. %https://balsamiq.com
-    I kept in mind the requirements while creating the screens for the application.
+        After collating the feedback, I translated the sketches to generation two prototypes on balsamic %https://balsamiq.com
+        which I was familiar with as I used them on projects throughout the year. The prototypes are fully described below. 
     
 \clearpage
              \begin{figure}
@@ -492,14 +518,14 @@
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{The home screen will display the graphics for the two parts of the application - "Create Pattern" and "Match Pattern". The images used for the buttons will display a pattern being created and a target image respectively. Clicking on the "Create Pattern" button will link the user to \textbf{Figure~\ref{fig:chooseFold}}, and clicking on match pattern will take the user to  \textbf{Figure~\ref{fig:target}}}
+                \caption{The home screen will display the graphics for the two parts of the application - "Create Pattern" and "Match Pattern". The images used for the buttons will display a pattern being created and a target image respectively. Clicking on the "Create Pattern" button will link the user to \textbf{Figure~\ref{fig:chooseFold}}, and clicking on "Match Pattern" will take the user to \textbf{Figure~\ref{fig:target}}.}
                 \label{fig:homeScreen}
                 \end{minipage}
             \end{figure}
             \begin{figure}
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{This figure is where the user will be able to choose how they want their virtual piece of paper folded. The images for each button will show the virtual piece of paper folded in half, quarters, sixths and eights with straight edges. You cannot fold a piece of paper into odd numbers about a centre point which is why they are excluded here. The user will press one of these buttons which will link them to the corresponding version of the screen shown in \textbf{Figure~\ref{fig:createPattern}}}
+                \caption{This figure is where the user will be able to choose how they want their virtual piece of paper folded. The images for each button will show the crease lines for the virtual piece of paper if it were folded in half, quarters, sixths and eights with straight edges. You cannot fold a piece of paper into odd numbers about a centre point which is why they are excluded here. The user will press one of these buttons which will link them to the corresponding version of the screen shown in \textbf{Figure~\ref{fig:createPattern}}. The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:homeScreen}}).}
                 \label{fig:chooseFold}
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.35\textwidth}
@@ -513,8 +539,7 @@
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{The user will create the cuts from the virtually folded piece of paper on this screen. The shape of the folded segment displayed will depend on which button was pressed.
-                They will have the option of deleting the last cut created with the "Undo" button, or refreshing the canvas with the "Clear" button.}
+                \caption{The shape of the folded segment and dashed lines indicating creases will depend on which button was pressed in \textbf{Figure~\ref{fig:chooseFold}}. The screen displayed here is as if the user pressed the fold in half button was pressed. On this screen, the user will create the cuts from the virtually folded piece of paper. They will have the option of deleting the last cut created with the "Undo" button, or refreshing the canvas with the "Clear" button. Pressing the reveal button will take the user to the next screen (\textbf{Figure~\ref{fig:reveal}}). The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:chooseFold}}) and progress will be reset.}
                 \label{fig:createPattern}
                 \end{minipage}
             \end{figure}
@@ -522,7 +547,7 @@
             \begin{figure}
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{Caption}
+                \caption{The unfolded version of the pattern the user created in the previous screen is displayed on this screen. The revealed image will depend of what button was pressed initially to chose the fold. The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:createPattern}}).}
                 \label{fig:reveal}
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.35\textwidth}
@@ -536,7 +561,7 @@
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{Caption}
+                \caption{A random target pattern will be displayed for the user. They can press the start button to link them to the next screen (\textbf{Figure~\ref{fig:matchPatternCreate}}) to start cutting. The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:homeScreen}}).}
                 \label{fig:target}
                 \end{minipage}
             \end{figure}
@@ -544,14 +569,14 @@
            \begin{figure}
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{Caption}
+                \caption{As before in \textbf{Figure~\ref{fig:createPattern}}, the folded segment and dashed lines indicating creases will depend on the target pattern shown in the previous page. The screen displayed here is as if the target image was created from the virtual piece of paper being folded in half. The user has the option of pressing the help button (explained in \textbf{Figure~\ref{fig:matchPatternCreateHelp}} and the target button which will show the user the target image again without resetting their progress). The user again will have the option of deleting the last cut created with the "Undo" button, or refreshing the canvas with the "Clear" button. Pressing the reveal button will take the user to the next screen (\textbf{Figure~\ref{fig:reveal}}). 
+                The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:target}}) and progress will be reset.}
                 \label{fig:matchPatternCreate}
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.35\textwidth}
                 \includegraphics[width=1\textwidth]{Images/Prototype/prototypeMatchPatternCreate.png}
                 \end{minipage}
             \end{figure}
-                        \clearpage
 
             \begin{figure}
                 \begin{minipage}[c]{0.35\textwidth}
@@ -559,7 +584,7 @@
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{Caption}
+                \caption{This is the same screen as \textbf{Figure~\ref{fig:matchPatternCreate}}, but with the help button pressed. This button will show the user where they need to create the cuts. The user will be able to toggle this button on and off.}
                 \label{fig:matchPatternCreateHelp}
                 \end{minipage}
             \end{figure}
@@ -567,7 +592,7 @@
             \begin{figure}
                 \begin{minipage}[c]{0.65\textwidth}
                 \captionsetup{font={normalsize}, margin = 1cm}
-                \caption{Caption}
+                \caption{The unfolded version of the pattern the user created in the previous screen is displayed on this screen. The revealed image will depend of what button was pressed initially to chose the fold. The user will have the option to compare the image they created with the target image they were aiming for. The left arrow will return the user to the previous screen (\textbf{Figure~\ref{fig:matchPatternCreate}}).}
                 \label{fig:revealWithOverlay}
                 \end{minipage}\hfill
                 \begin{minipage}[c]{0.35\textwidth}
@@ -576,13 +601,103 @@
             \end{figure}
                         \clearpage
             
-            
-                \paragraph{}
-                Covergirl Covergirl
-            
 
 \newpage
-\section{Creation of Software}
+\section{Implementation}
+
+\subsection{Requirements}
+    
+    Functional Requirements 
+    
+    \begin{enumerate}
+      \item Home Screen
+        \begin{enumerate}[label*=\arabic*.]
+        \item The application must allow the users to select a "create Pattern" button or a "Match pattern" button linkin3g them to eh relevant screen
+        \item The application could have music playing in the background controlled via a button on the home screen
+        \item The application could have an information page linked from the home screen
+      \end{enumerate}
+       \item Choose Fold
+        \begin{enumerate}[label*=\arabic*.]
+        \item The application must allow the user to choose whether they want the virtual piece of paper folded into 2,4,6 or 8 pieces.
+      \end{enumerate}
+      \item Creating cuts
+      \begin{enumerate}[label*=\arabic*.]
+        \item The application must display the corresponding shape of the folded piece of paper depending on which fold was selected.
+        \item The application must indicate which side(s) are folded via the display of a dashed line(s).
+        \item The application must allow the user to tap on screen outside the virtually folded paper to start a cut. 
+        \item The application must allow the user to tap on screen to start a cut. 
+        \item The application must indicate to the user where the start of their cut.
+        \item The application must allow the user to complete their cut by tapping near the start of their cut. 
+      \end{enumerate}
+      \item Create Pattern
+        \begin{enumerate}[label*=\arabic*.]
+        \item The application must display a folded
+      \end{enumerate}
+      \item Match Pattern
+        \begin{enumerate}[label*=\arabic*.]
+        \item 
+      \end{enumerate}
+      \item Reveal
+        \begin{enumerate}[label*=\arabic*.]
+        \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual peice of paper. 
+        \item The application could allow the user to share their virtual unfolded creation to other applications. 
+         \item The application could have a pinch zoom feature for the virtual unfolded creation 
+        \item The application could allow the user to save their virtual unfolded creation to their camera roll.
+      \end{enumerate}
+    \end{enumerate}
+
+    
+    1. Learn the basics for creating an iPhone application
+        2. Create an application for iPhone that allows the user to draw cuts into a folded piece of
+        paper
+        2.1. Demonstrate a crease pattern and folding of a square piece of paper into 2
+        2.2. Allow the user to draw cuts into the piece of paper
+        2.3. Reveal the image of the paper unfolded with the cuts made
+        2.4. Repeat for folding the square into 4, 6 (as you cannot fold a piece of paper into 3 or
+        5 layers about a central point) – revealing the unfolded cut versions at the end.
+        3. Add another level to the application which has an unfolded target shape and asks you what cuts are to be made to create this shape. E.g. pentagon is the target shape. The
+        application reveals the square folded into 5 and asks you where the cut should be made. 3.1. A margin of error will have to be programmed into this.
+        3.2. Application will show you the solution once you have tried.
+        4. Additional features
+        4.1. Additional features can be programmed for example changing the colours and
+        shading.
+        4.2. Higher number of folds.
+        4.3. Showing the actual folding/unfolding of the piece of paper in between steps
+    
+    
+    
+    
+    
+    
+    
+    
+    Non-Functional
+    Efficiency 
+    
+    Performance
+    The application should respond to the users touch within 0.5 seconds.
+    The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
+    Useability
+        The average user should be familiar with the application after 5 minutes of use. 
+        The average user should be able to understand the flow of app easily.
+        
+        Supportability
+        The application shall be available on iPhone 7,8 ..check
+        
+        Dependability
+        The application shall be availabl
+        
+        The application shall be updated to the latest version 
+        
+        Reliability
+        
+        Availability
+        
+        
+        Maintainability
+Maintainability: This relates to the ease at which your app finds bugs and fixes t
+        
+
 
     
     \subsection{Creating Kirigami}
@@ -598,7 +713,7 @@
             Main screen
             
             Music and Info discussed later on in additional features (x.x.x.)
-            
+            Navigation bar
           
             \paragraph{Segue}
                 I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. 
@@ -684,189 +799,226 @@
                         \label{fig:kiriZen-matchUnfoldedPattern}
                     \end{wrapfigure}
       
-
+\clearpage
 \newpage
 \section{Human Computer Interaction}
-%heuiristics
     \paragraph{}
-    
-        \subsection{Evaluation}
-            
-                \paragraph{}
-
-    \subsection{User Testing}
-    
-           \paragraph{} Throughout the project I asked my peers to test out the app and I observed how they interacted with it. For example I observed that other users had larger hands and fingers than mine so the application was harder to interact with. I addressed this issue by enlarging the button size, and the radius of initial circle. 
-           
-           In addition to this, I was informed by the users that the icons on the initial screen were very small when size by side so I made the decision to enlarge them and stack them vertically to see the icon image more clearly. 
-           
-           Undo and clear functionality - observe user interct with appp
-                 After I incorporated this additional undo functionality I again observed the user interact with the application. 
-           
-           added lines after user feedback
-           
-           Instructions (started with help, then question mark, then setteled on the word - clearest)
-           
-           Share and save feature more important than initally expected.
-        
-
 
     
     \subsection{Theme}
         
         \paragraph{}
-        The name of the app is a combination of the words "kiri" and "zen". Kiri as previously mentioned referes to the Japanese word meaning to cut. The word Zen  associated with ..... is Japanese word meditation ........ 
+        The name of the app "KiriZen" is a combination of the words "kiri" and "zen". Kiri as previously mentioned refers to the Japanese word meaning to cut. The word zen has connotations of peace and relaxation. These words encompass what I am trying to achieve with the app. I am aiming to make the the users feel relaxed while creating or matching the kirigami patterns.
         
-        Upon researching the name no similar applications, products or concepts that could potentially lead users elsewhere were found. If I were to publish the application it would be easy for users to find as there would be no ambiguity regarding the ....
-        
-        
-        share links to the application or find quickly 
-        
-        to find and share meaning there would be no conflicts.
+        Upon researching the name, no similar applications, products, or concepts that could potentially lead users elsewhere were found. Therefore if I were to publish the application it would be easy for users to find as there would be no ambiguity regarding where they should look or what they are trying to find. Links to share the application would allow it to be found quickly. 
 
-        \subsubsection{Additional Features}
-        \paragraph{}
-        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete experience for the user.    Additional features .... e.g. music player, information page, icons, 
+        \subsection{Additional Features}
+            \paragraph{}
+        The additional features of the application, while not crucial to the core function, are crucial to creating an overarching theme for the application creating a more complete and consistent experience for the user. Additional features include the icon, music player, information page etc are explained below. 
         
          \subsubsection{Graphics}
-    
+                \paragraph{}
+
         \begin{wrapfigure}{r}{0.25\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/icon.png}
-                        \caption{Icon}
+                        \caption{The icon created for "KiriZen" in keeping with the theme.}
                         \label{fig:icon}
                     \end{wrapfigure}
-            I created the icon in \textbf{Figure~\ref{fig:icon}} using the online tool canva %https://www.canva.com 
-            to create the icon for the application. I chose a butterfly as they are symmetrical and the image
+            I created the icon in \textbf{Figure~\ref{fig:icon}} using the online tool Canva %https://www.canva.com 
+            I chose a butterfly as I believe this represents the application well. The butterfly is symmetrical referring to the folding aspect of the application which creates the symmetry, and the segments appear to be cut out referring to the kirigami aspect.
             
-            I used the tool appicon %https://appicon.co
-            to automatically generate the required images sized for different resolutions for different iPhone models. This is to allow the images to have the best possible resolution for the device it is being displayed on.  
-            
-            Need multiple sizes as the small components of the image – if downscaled from the large image would disappear when downscaled i.e. from 3x to 1x image. 
+            I used the tool Appicon %https://appicon.co
+            to automatically generate the required images sized for different resolutions for different iPhone models. This is to allow the images to have the best possible resolution for the device it is being displayed on.
         
-            I also used canva to create icons for all the buttons as  seen in fig x and y. I thought it was important to create the images from scratch rather than use stock images to make them personal to my app, so unlike some of the reviewed apps, the images are relevant and clearly relate to their function. I think it is also important to use original images to help create a uniqueness to my app, but in the case of the buttons on the main "creation" screens, it is more important that the functionality is clear than having an attractive icon which is why I generated the buttons from scratch with single words rather than inserting images into a button.
+            I also used Canva to create icons for all the buttons as  seen in \textbf{Figure~\ref{fig:kiriZen-main}} and \textbf{Figure~\ref{fig:kiriZen-chooseFold}}. I thought it was important to create the images from scratch rather than use stock images to make them personal to my app, so unlike some of the reviewed apps, the images are relevant and clearly relate to their function. I think it is also important to use original images to help create a uniqueness to my app. However in the case of the buttons on the main "Creation" screens (e.g. \textbf{Figure~\ref{fig:kiriZen-createPattern}}), I believe it is more important that the functionality is clear than having an attractive icon. This is why I generated those buttons from scratch with single words rather than inserting images into a button. I further customised the buttons to highlight them when tapped so the user can see their action has been registered.
             
-            I kept the colour palette consistent throughout and initially picking pastel colours for a calming modern  aura rather than saturated colours reminiscent from games from the 80s. I changed the navigation bar's colour to pink rather than the default blue to fit in with the colour scheme. 
+            I kept the colour palette consistent throughout and initially picking pastel colours for a calming modern  aura rather than saturated colours reminiscent from games from the 80s. I changed the navigation bar's colour to pink rather than the default blue to fit in with the colour scheme as seen in the top of \textbf{Figure~\ref{fig:kiriZen-chooseFold}}.
             
             
-            buttons - animations, curve, change overlay highlight. 
-            
-            \subsubsection{Share and Save}
+             \subsubsection{Share and Save}
+                \paragraph{}
+                
+                The share and save buttons were suggested by users throughout testing so after the main functionality was working, I implemented these features. The save button in \textbf{Figure~\ref{fig:kiriZen-createUnfoldedPattern}} and inherited into \textbf{Figure~\ref{fig:kiriZen-matchUnfoldedPattern}} is for convenience. When save is tapped, it is common to ask the user permission to access their photo library. After the first selection, the answer will be remembered (the choice can be changed via the iPhone settings as with any other application). To implement this,                 "Privacy - Photo Library Additions Usage Description" needs to be added to the Info.plist file along with a String the user will see. %\cite{}https://developer.apple.com/documentation/photokit/requesting_authorization_to_access_photos
+                
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
                             \centering \includegraphics[width=0.7\linewidth]{KiriZen/share.png}
-                            \caption{aaaaa}
+                            \caption{The built in UI Activity View Controller the user can interact with to share the pattern they created on social media, messenger applications etc.}
                             \label{fig:kiriZen-share}
                         \end{minipage}\hfill
                         \begin{minipage}{0.45\textwidth}
                             \centering
                             \includegraphics[width=0.7\linewidth]{KiriZen/main.png}
-                            \caption{aaaaa}
+                            \caption{The home screen for the application with links to the information page, both parts of the app and the sound can be muted with the top left icon.}
                             \label{fig:kiriZen-main}
                         \end{minipage}
                     \end{figure}
+                
+                The share functionality was simple as there is a UI Activity View Controller (revealed in figure). Since the application does not contain sensitive information, I decided that there is no need to restrict the icons that appear in the view controller so the user is free to share their creation however they desire. The UI Activity View Controller is also a feature used in many applications so the user will be familiar with it and can interact seamlessly to share to their desired destination. The image shared has been cropped to just include the image of the unfolded paper and not the surrounding text or buttons. There was also feedback to include a print function which the user is able to do via this feature. The users responded very well to the save and share button - as social media is such a big part of today's culture. I underestimated the positive response this feature would get.
             
              \subsubsection{Music Player}
-                I have music playing in the background associated
-                I added the music to enhance the mindfulness aspect of the application. As  I contacted the artist as the music was
+                         \paragraph{}
+
+                I found relaxing music from from a free stock music website %\citehttps://www.free-stock-music.com/barradeen-just-chilling-out.html   
+                and contacted the creator to get permission to use it in KiriZen. I added the music to enhance the mindfulness aspect of the application.
                 
-                %cite music
-                There is an on off toggle button. 
+                There is a mute button (shown in \textbf{Figure~\ref{fig:kiriZen-main}}) which changes to mute if clicked. To add the music I used an online tutorial. %cite https://www.zerotoappstore.com/how-to-add-background-music-in-swift.html
+                There are three ways to mute the music on my app. The two inbuilt speaker control buttons of the iPhone itself, this is to allow the user to mute the music how they would normally choose to in any other application. The third way is with the mute button on the applications home screen.
                 
-                %cite https://www.zerotoappstore.com/how-to-add-background-music-in-swift.html
-                
-        \subsection{Instructions}
+        \subsubsection{Instructions}
             
                 \paragraph{}
+                    The instructions page was initially one image which I updated to an animation as I noticed most users do not want to read the text.
+                    As there was not much functionality to the information page, I mainly used the storyboard in Xcode to create a scroll-able screen (shown in \textbf{Figure~\ref{fig:kiriZen-instructionsCreate}} and \textbf{Figure~\ref{fig:kiriZen-instructionsMatch}}), however I coded the animation of the images using a timer to change the image every 0.4 seconds to the next one in the corresponding array. 
+           
                \begin{figure}[!ht]
                                 \begin{minipage}{0.45\textwidth}
                                     \centering \includegraphics[width=0.7\linewidth]{KiriZen/instructionsCreate.png}
-                                    \caption{aaaaa}
+                                    \caption{The instructions for the "Create Pattern" portion of the app. The image is animated showing how to cut from the virtual paper.}
                                     \label{fig:kiriZen-instructionsCreate}
                                 \end{minipage}\hfill
                                 \begin{minipage}{0.45\textwidth}
                                     \centering
                                     \includegraphics[width=0.7\linewidth]{KiriZen/instructionsMatch.png}
-                                    \caption{aaaa}
+                                    \caption{The user can scroll down from the  \textbf{Figure~\ref{fig:kiriZen-instructionsCreate}} instructions to see the "Match Pattern" portion of the instructions. This image is also animated.}
                                     \label{fig:kiriZen-instructionsMatch}
                                 \end{minipage}
                             \end{figure}
 
 
-
-                 \subsubsection{Launch Screen}
+                 \subsubsection{Launch Screen and Information Page}
 
                     \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
                             \centering \includegraphics[width=0.7\linewidth]{KiriZen/launchPage.png}
-                            \caption{aaaaa}
+                            \caption{The launch screen for the application that will appear while it is loading. The background reflects the theme and icon of the application.}
                             \label{fig:kiriZen-launch}
                         \end{minipage}\hfill
                         \begin{minipage}{0.45\textwidth}
                             \centering
                             \includegraphics[width=0.7\linewidth]{KiriZen/info.png}
-                            \caption{aaaaa}
+                            \caption{The information page linked from the info button in \textbf{Figure~\ref{fig:kiriZen-main}}.}
                             \label{fig:kiriZen-info}
                         \end{minipage}
                     \end{figure}
-            
-                I incorporated a loading screen while the application is starting up so the user can view a page that is relevant to the application rather than the default white page. This is especially important if the application is taking a long time to open - usually this happens on the initial load if the application is not already running in the background.
-                
-
-                
-                 \subsubsection{Information Page}
-                
-                The information page serves as additional insight for the user if they would like some additional information about the application. 
-                
+                    
+                    \paragraph{}
+                    I incorporated a loading screen (\textbf{Figure~\ref{fig:kiriZen-launch}}) for while the application is starting up so the user can view a page that is relevant to the application rather than the default white page. This is especially important if the application is taking a long time to open - usually this happens on the initial load if the application is not already running in the background. The butterflies on this page are in keeping with the theme and I have scattered them throughout the rest of the application too.
+                    
+                    The information page serves as insight for the user if they would like some additional information about the application and kirigami.
                
-
-
-
-    \subsection{Deployment}
-        \paragraph{}
-        put on app store
-        could do seasonal marketing if near Christmas -e.g. extra snowflake designs and animations
-        
-        The code should be tested on the latest beta version of Xcode software as it will contain extra upcoming features and I will be able to test it on the updates that will be released shortly in the future. 
-        
+               \subsection{User Testing}
     
+           \paragraph{Size}
+           Throughout the project I asked my peers to test out the app and I observed how they interacted with it. For example, I observed that other users had larger hands and fingers than mine so the application was harder to interact with. I addressed this issue by enlarging the button size, and the radius of the initial circle so they do not have to be as precise when ending the cut. In addition to this, I was informed by the users that the icons on the initial screen were very small when size by side so I made the decision to enlarge them and stack them vertically to see the icon image more clearly. 
+           
+           \paragraph{Undo and clear functionality}
+           I observed the user interact with app and at first I only had the undo and clear buttons delete the shapes. However I noticed that the users also wanted this function while drawing their shape to edit their last point. After I incorporated this additional undo functionality I observed new users interact with the application and they appeared to use this functionality with ease which I took to imply this functionality is expected. 
+           
+           \paragraph{Cutting the shapes}
+           Some more feedback that was provided by the users was that they would like lines between the circles so they can see the outline of the shape they are drawing before it is finalised rather than imagining the lines. I added lines with small dashes to illustrate that this is where the cuts will occur and the users responded positively to this. 
+           
+            \subsection{Evaluation}
+            
+                \paragraph{}
+                I used Nielsen's heuristics to conduct a usability overview. I used three evaluators and their responses are included in Appendix A. I asked the users to talk me through their comments so I could fully understand the problems. I gathered the information below to evaluate usability problems and suggested how to alleviate them. 
+                %https://www.nngroup.com/articles/ten-usability-heuristics/
+
+                Target button 
+                
+                
+                \paragraph{Visibility of system status}
+                The application generally keeps users informed as to the status of their actions. E.g. the buttons show a response. The addition of pop ups to indicate to the user that they can start cutting was suggested. 
+                
+                \paragraph{Match between system and real world}
+                The functionality of the buttons is generally clear. The application is fairly realistic. 
+                
+                \paragraph{User control and freedom}
+                The in built navigation allows users to back out of the current screen easily. The undo and clear allows the users to edit their patterns as they go easily and intuitively. 
+
+                \paragraph{Consistency and standards}
+                The buttons are in the same place in both parts of the application so the users do not have to search for their position. The user interface creates cuts that are predictable. The theme is present throughout - likely due to colour scheme. I could maybe edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue. 
+
+                \paragraph{Error prevention}
+                The users are unable to cut from the inside of the blue paper (unauthorised actions). Users are able to undo both types of actions e.g. undo a shape if that was the last thing created or undo a circle and path (indicating a new point) if that was last. Clear button can reset the page. 
+
+                \paragraph{Recognition rather than recall}
+                The buttons are easily recognisable due to the icons in the main screen and choose fold sections. The words on the create pattern screen buttons make the application easy to use. 
+                
+                The users must remember to click on the original dot the made to complete the cut. The application could be updated to cut the shape as soon as the line crosses outside the paper - however this would make it harder for certain shapes of cuts to occur so this may be a case where the advice needs to be tested out before a final decision is made. 
+
+
+                \paragraph{Flexibility and efficiency of use} 
+                The users reported that the application was flexible and efficient. The majority of the buttons have a quick response time. The target button needs some indication that you need to hold it down.
+
+                \paragraph{Minimalist design}
+                The application is clear overall without clutter making it east to use.
+
+                \paragraph{Help error recovery}
+                Errors did not occur while the users were testing the application. Errors that could occur would likely be associated with the save/ share feature.
+
+                \paragraph{Help and documentation} 
+                The animation is helpful and the user can understand what to do after reading it. One user suggested adding instructions to the home screen page and changing the "i" to an about button.
+                
+                \subsubsection{Heuristics Conclusion}
+                A few pop-ups would increase the ease of use of the app and allow the user to learn how to use the app faster, e.g. "Tap here" if the user does not start the cut within a few taps. I could try to figure out some ways the users can accelerate function such as cutting, undo etc. to increase flexibility and efficiency. 
+                
+                The mute button is an example of flexibility within the app most users did not mute the application while testing. In the future I could allow applications to test the application for a longer period of time / throughout the week to test the mindfulness aspect of the application which is difficult to test and measure in a short testing period. 
+                
+                The overall reaction of the application was positive with minor edits necessary. The highest numeric value given was "2" which reflects this and all heuristics passed. 
+        
+
+    \subsection{Publishing}
+        \paragraph{}
+        There is a possibility to publish this application on the app store when I have sufficient funds available. Before this takes place, the code should be tested on the latest beta version of Xcode software as it will contain extra upcoming features I may be able to make use of and I will be able to test it on the updates that will be released shortly in the future (this is the purpose of the beta version). I will test it on other iOS devices other than iPhone 7/8 and edit the application accordingly.
+        
+        I would need to decide if I would like to make the app paid or free, and if I should include advertisements. I believe a free app is more appropriate, especially for the target users and I myself would prefer an unpaid application. However as discussed in background research I would need to make sure the advertisements do not disrupt the user experience. As my goal is to create an application that is relaxing for users to use and not to make money, I could consider taking away all advertisements and making the app completely free.
+        
+        I would need to test this on a greater variety of users to see if I have fully achieved what I aimed for with this application as it was mostly my peers.  I can publish the application as test version to get user feedback on websites such as TestFlight. %cite
+        I could then check the user reviews and make an appropriate edits if necessary. 
+        
+        Before publishing this on the app store, I can incorporate seasonal marketing if near Christmas. For example e.g. extra snowflake designs for the target patterns and snowflake animations / wallpapers to attract users.
+        
+        
 \newpage
 \section{Discussion}
-    \paragraph{}
-
-    
     \subsection{Achievements}
-    
-        \paragraph{}
-        Creating an application that unlike the other iPhone application has consistent, reliable and predictable cutting action. 
-        
-        I created an application where the majority of users reported they felt relaxed while using the application confirming that it can be used 
-        as an effective part of the mindfulness practice. 
-        in the context of as part of the practice of mindfulness 
-    
-    \subsection{Challenges}
-    
-        \paragraph{}
-        How the user should cut. It was challenging as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. 
-        
-        
-        Layering the shapes on the screen on top of dsashed line and cut.
-        
-        
-        Reveal page transformations. 
-        
-        Limitation 
-        compatability 
-        
-    \subsection{Architecture}
+        \subsubsection{Architecture}
         
         \paragraph{}
-using inheritance ... 
+        using inheritance ... 
          flexibility, scalability, feasibility, reusability, and security into a structured solution
          Refactoring, common buttons, canvas, reveal. 
         
         \paragraph{}
         While creating making smaller methods
+        
+        \subsubsection{Final Product}
+        I created an application from scratch in a new language I was not familiar with. The application is unlike the other iPhone application I researched as it has consistent features and a reliable cutting action. The majority of users reported they felt relaxed while using the application confirming that it can be used as an effective part of the mindfulness practice therefore I believe I have achieved my aims. 
+        
+        While conducting the background research, I was surprised with how few of the apps had a reliable core cutting features and many inconsistencies throughout. My application contrasts this and users pick up on the core functionality quickly.
+
+        
+    \subsection{Challenges}
+    
+        \paragraph{}
+        It was challenging as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. 
+        
+        How the user should cut. 
+        
+        Layering the shapes on the screen on top of dashed line and cut.
+        
+        Reveal page transformations. 
+        
+        Limitation 
+        compatibility
+        
+            \subsection{Process}
+            \paragraph{}
+            The background research I produced turned out to be extremely useful throughout the project.
+            
+            The process of creating this application was very new and difficult. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use. 
             
             
     \subsection{Future}
@@ -882,13 +1034,20 @@ using inheritance ...
                 
                 Algorithms for comparing target images to the image the user created 
                 
-                
                 Wallpaper
                 
 \newpage
 \section{Conclusion}
         
             \paragraph{}
+            I have achieved my aims for the project by producing an idea for a kirigami themed application that I developed into an piece I am proud of that reflects myself. 
+            
+            The application has shown to a new audience that kirigami can be a relaxing recreational activity and I hope to inspire them to physically recreate their favourite designs in real life. 
+
+            I have learnt how to create an iPhone application from scratch to a final product.
+            
+            I am grateful to have had the opportunity to undertake this project. I enjoyed the creativity and freedom of control that came with making this it and I plan to publish it on the app store in the future.
+            
 
         
 \newpage
@@ -897,8 +1056,11 @@ using inheritance ...
 \bibliographystyle{IEEEtran}
     \bibliography{bibliography}
     
+    \newpage
+\Section{Appendix A}
+
 \newpage
-\Section{Appendix}
+\Section{Appendix B}
 
         \begin{enumerate}
             \item On a Mac running macOS 10.14.3 or later
@@ -908,7 +1070,7 @@ using inheritance ...
             https://git-teaching.cs.bham.ac.uk/mod-msc-proj-2018/sct808
             \item Open "kirigami draft 1.xcodeproj"
             \item Run on an iPhone 8 simmulator. 
-            (I believe it is not possible to run on your own iPhone without already being an app developer.)
+            (It may not be possible to run on your own iPhone without already being an app developer, an account can be created.)
       
         \end{enumerate}
         
