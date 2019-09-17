@@ -3,7 +3,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
-\usepackage[margin = 1.2 in]{geometry}
+\usepackage[margin = 1.3 in]{geometry}
 \usepackage{titlesec}
 \usepackage{textcomp}
 \usepackage{sidecap}
@@ -24,6 +24,7 @@
 
     \date{September 2019 \vspace{20pt}}
     \maketitle
+
 \end{titlepage}
 % \begin{frame}{}
 %     \begin{multicols}{2}
@@ -117,8 +118,8 @@
 
         \subsection{Kirigami-like Applications}
            \paragraph{}
-            I searched for applications on the web and iPhone app store with a theme that centered around creating kirigami. I wanted to gain an insight into what is already available to ensure my idea was unique, and to evaluate the strengths and weaknesses of the other apps as a user and learn from them before began designing my own app.
-        
+            I searched for applications on the web and iPhone app store with a theme that centered around creating kirigami. I choose the most popular and relevant applications that came up when I typed in key words. I wanted to gain an insight into what is already available to ensure my idea was unique, and to evaluate the strengths and weaknesses of the other apps as a user and learn from them before began designing my own app.
+            
             \subsubsection{Paper Snowflake Maker}
             
                 \paragraph{Type:} Web application %\cite http://rectangleworld.com/PaperSnowflake/
@@ -287,11 +288,7 @@
                 After selection of a language, the language is inconsistent throughout the application. For example no matter which language you pick, the title for some sections - for example the colour picker - is always displayed in Russian as seen in \textbf{Figure~\ref{fig:peppaRussian}}.  As the application is clearly aimed for children this may be confusing for them.
                 
                 There is a black loading page before every screen is displayed which stops the flow of the app and makes the app feel slow.
-                
-                There are glitches on the free-form creation screen displayed in \textbf{Figure~\ref{fig:peppaGlitchLine}} - you can still make cuts on the paper via the underlying view when a pop up is displayed. This should be disabled and the line should be displayed in the layer below the pop up.
-                
 
-                
                 \begin{figure}[!ht]
                         \begin{minipage}{0.32\textwidth}
                             \centering \includegraphics[width=0.8\linewidth]{Images/peppa/peppaGlitchLine.PNG}
@@ -315,9 +312,9 @@
                         \end{minipage}
                     \end{figure}
                     
+                    There are glitches on the free-form creation screen displayed in \textbf{Figure~\ref{fig:peppaGlitchLine}} - you can still make cuts on the paper via the underlying view when a pop up is displayed. This should be disabled and the line should be displayed in the layer below the pop up.
+                
                     It is unclear what objects can be interacted with throughout the application for example in \textbf{Figure~\ref{fig:peppaMain}} the scissors would be the most obvious object to interact with to start cutting the snowflakes, however the user can only interact with the coloured paper and the notepad. On occasion there appears to be a glitch illustrated in \textbf{Figure~\ref{fig:peppaGlitchPoint}} where the application indicates to the user an item should be tapped, however in fact none of the objects in the frame are intractable. 
-                    
-                     The app will freeze if your cut touches itself as seen in \textbf{Figure~\ref{fig:peppaFreeFormCut}}. Sometimes the paper is not cut even when the line the user is drawing is registered. If the user moves their finger too quickly, the cut may not be created and the registered line will disappear as if illegal cut was drawn.
                     
                     \begin{figure}[!ht]
                         \begin{minipage}{0.32\textwidth}
@@ -342,7 +339,8 @@
                         \end{minipage}
                     \end{figure}
                     
-                
+                    The app will freeze if your cut touches itself as seen in \textbf{Figure~\ref{fig:peppaFreeFormCut}}. Sometimes the paper is not cut even when the line the user is drawing is registered. If the user moves their finger too quickly, the cut may not be created and the registered line will disappear as if illegal cut was drawn.
+                    
                     On the ready made shapes page (\textbf{Figure~\ref{fig:peppaShapes}}), it is not obvious that you need to drag the shapes of the cuts as they appear where the buttons are and are covered by the button bar when they appear and they only appear if you drag your finger not when you tap the button. The button will register the tap by flashing but no reaction will occur from the app if the user only tap not drag your finger.  even though the buttons glow when tapped. The ready made cuts produce a jagged edge if the user enlarges them as seen in cut made in the top left of \textbf{Figure~\ref{fig:peppaShapes}}. Some of the ready made cuts are not in keeping with the theme such as duck and fish shapes for a snowflake / Christmas application. 
                 
                 The main problem with the application is the assumed knowledge of the buttons. For example, it is unclear what the buttons with snowflakes on them in \textbf{Figure~\ref{fig:peppaMain}} and \textbf{Figure~\ref{fig:peppaGlitchPoint}} will do. They appear to allow the user to drag snowflakes onto the window in the background, however it is difficult to use so the functionality is unclear. The left facing arrow button on the main screen shown in \textbf{Figure~\ref{fig:peppaMain}} will take the user back to the previous screen. This navigation to a previous screen is a common action for the left arrow button. However on the free-form cut screen shown in \textbf{Figure~\ref{fig:peppaFreeFormCut}}, pressing the left arrow button will undo the shape the user has just cut.
@@ -969,35 +967,33 @@ Additional features include the icon, music player, information page etc are exp
                 I used Nielsen's heuristics to conduct a usability overview. I used three evaluators and their responses are included in Appendix A. I asked the users to talk me through their comments so I could fully understand the problems. I gathered the information below to evaluate usability problems and suggested how to alleviate them. 
                 %https://www.nngroup.com/articles/ten-usability-heuristics/
 
-                Target button 
-                
                 
                 \paragraph{Visibility of system status}
-                The application generally keeps users informed as to the status of their actions. E.g. the buttons show a response. The addition of pop ups to indicate to the user that they can start cutting was suggested. 
+                The application generally keeps users informed as to the status of their actions. E .g. the buttons show a response. The addition of pop ups to indicate to the user that they should start cutting was suggested. 
                 
                 \paragraph{Match between system and real world}
-                The functionality of the buttons is generally clear. The application is fairly realistic. 
+                The functionality of the buttons is clear. The application is fairly realistic compared to cutting paper in real life. 
                 
                 \paragraph{User control and freedom}
                 The in built navigation allows users to back out of the current screen easily. The undo and clear allows the users to edit their patterns as they go easily and intuitively. 
 
                 \paragraph{Consistency and standards}
-                The buttons are in the same place in both parts of the application so the users do not have to search for their position. The user interface creates cuts that are predictable. The theme is present throughout - likely due to colour scheme. I could maybe edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue. 
+                The buttons are in the same place in both parts of the application so the users do not have to search for their positions. The user interface creates cuts that are predictable. The theme is present throughout - likely due to colour scheme.
 
                 \paragraph{Error prevention}
-                The users are unable to cut from the inside of the blue paper (unauthorised actions). Users are able to undo both types of actions e.g. undo a shape if that was the last thing created or undo a circle and path (indicating a new point) if that was last. Clear button can reset the page. 
+                Unauthorised actions are prevented users are unable to cut from the inside of the blue paper. Users are able to undo both types of actions e.g. undo a shape if that was the last thing created or undo a circle and path (indicating a new point) if that was last. Clear button can reset the page. 
 
                 \paragraph{Recognition rather than recall}
                 The buttons are easily recognisable due to the icons in the main screen and choose fold sections. The words on the create pattern screen buttons make the application easy to use. 
                 
-                The users must remember to click on the original dot the made to complete the cut. The application could be updated to cut the shape as soon as the line crosses outside the paper - however this would make it harder for certain shapes of cuts to occur so this may be a case where the advice needs to be tested out before a final decision is made. 
+                The users must remember to click on the original dot the made to complete the cut. The application could be updated to cut the shape as soon as the line crosses outside the paper - however this would make it harder for certain shapes of cuts to occur so this may be a case where the advice needs to be tested out before a final decision is made.
 
 
                 \paragraph{Flexibility and efficiency of use} 
                 The users reported that the application was flexible and efficient. The majority of the buttons have a quick response time. The target button needs some indication that you need to hold it down.
 
                 \paragraph{Minimalist design}
-                The application is clear overall without clutter making it east to use.
+                The application is clear overall without clutter making it east to use. Users agrees the design is minimalistic. 
 
                 \paragraph{Help error recovery}
                 Errors did not occur while the users were testing the application. Errors that could occur would likely be associated with the save/ share feature.
@@ -1010,7 +1006,10 @@ Additional features include the icon, music player, information page etc are exp
                 
                 The mute button is an example of flexibility within the app most users did not mute the application while testing. In the future I could allow applications to test the application for a longer period of time / throughout the week to test the mindfulness aspect of the application which is difficult to test and measure in a short testing period. 
                 
+                 I could maybe edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue. 
+                
                 The overall reaction of the application was positive with minor edits necessary. The highest numeric value given was "2" which reflects this and all heuristics passed. 
+                
         
 
     \subsection{Publishing}
@@ -1123,7 +1122,26 @@ Additional features include the icon, music player, information page etc are exp
     \newpage
 \Section{Appendix A}
 
-\newpage
+    \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=1\linewidth]{Images/User1.png}
+            \caption{The heuristics form for user 1.}
+            \label{fig:user1}
+    \end{figure}
+    \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=1\linewidth]{Images/User2.png}
+            \caption{The heuristics form for user 2.}
+            \label{fig:user2}
+    \end{figure}    
+    \begin{figure}[!ht]
+            \centering
+            \includegraphics[width=1\linewidth]{Images/User3.png}
+            \caption{The heuristics form for user 3.}
+            \label{fig:user3}
+    \end{figure}
+
+\clearpage
 \Section{Appendix B}
 
         \begin{enumerate}
