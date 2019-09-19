@@ -18,7 +18,7 @@
 
 \begin{document}
 \begin{titlepage}
-    \title{\vspace{40pt}\Huge KiriZen: Creation of an Kirigami Inspired iPhone Application in Swift}
+    \title{\vspace{40pt}\Huge KiriZen: Creation of a Kirigami Inspired iPhone Application in Swift}
 
     \author{ \\\hline \\\\\\ \Large \vspace{5pt} Author: Stephanie Tindal \\\Large \vspace{5pt}{Student ID: 1936508}\\\Large \vspace{50pt}{Supervisor: Achim Jung} \\ \hline\\\\\\  \vspace{5pt}{MSc Computer Science} \\ \vspace{5pt}{School of Computer Science, University of Birmingham}\\\\\\ \hline\\\\}
 
@@ -715,44 +715,71 @@
                 
                 ``CreatePatternVC" creates a UIView called canvas where the functions associated with cutting can occur.
                     
-                 \paragraph{}
+                 \paragraph{Cutting Shapes}
                  The foldValue determines which shape of what dimensions will be created in the draw function. When this function is called, the shape is drawn and the parameters for the dashed lines are set and the function to draw the dashed line is called. The lines indicate to the user the sides of the segment that were folded and can be seen in \textbf{Figure~\ref{fig:icon}}.
                  When cuts are made from the shape, I wanted the dashed lines to appear intact so the user does not have to recall were the folds are. I decided to make the majority of shapes created of the type CAShapeLayer. This was to make it simple to layer the shapes in the order I desired. When cuts were made from the virtual paper, I could bring the dashed line shape to the front of the view easily. This effect is illustrated in \textbf{Figure~\ref{fig:icon}} with the ready cut shapes.
                  
-                 The user can create the cuts by tapping on the screen. I made the decision that the user must be able to cut from the edge of the paper. This is to make the transition to real life easier if the user wanted to try out their creations. To cut with scissors, you must start of the edge of the paper, not in the middle. I decided that the
+                 The user can create the cuts by tapping on the screen. I made the decision that the user must be able to cut from the edge of the paper. This is to make the transition to real life easier if the user wanted to try out their creations. To cut with scissors, you must start of the edge of the paper, not in the middle. I also made the decision to not remove the smaller pieces of paper as those can make for interesting patterns and I do not wish to make the decision for the user which pieces they would like to keep, and which they would like to discard.
                  
-                 as I do not wish to make the decision for the user which pieces they would like to keep, why not all?
-                 
-                 
-                 
-            Tap location
-            Get pixel colour
-            Compare pixels
-            To create shapes: circle, path and shape array and tap count
-            
-            \begin{wrapfigure}{l}{0.4\textwidth}
+                 \begin{wrapfigure}{r}{0.4\textwidth}
                         \centering
                         \includegraphics[width=0.35\textwidth]{KiriZen/createPattern.png}
                         \caption{The user has created three shapes and is partway through making the fourth. The dark purple circle represents the start of the shape they will cut. The clear circles represent the corners of the cuts with the dotted lines representing the edges of the cut.}
                         \label{fig:kiriZen-createPattern}
                     \end{wrapfigure}
+                    
+                 To implement the cutting function, I used a number of data structures to hold information. 
+                 
+                 tapPoint contains the co-ordinates of the tap.
+                 
+                 initialTap contains the co-ordinates of the initial tap.
+                 
+                 tapCount is incremented with each tap. It helps to determine the progression of the shape being created.
+                 
+                 shapesArray is an array of CAShapeLayers that contains the shapes that have been created.
+                 
+                 pathArray is an array of co-ordinates (as CGPoints) that will help create the paths when the shape is being created.
+                
+                 circleArray is an array of CAShapeLayer that contains all the circles that are created that represent the corners of the shape.
+                
+                 lineArray is an array of CAShapeLayer that contains the dotted lines representing the edges of the shape.
+                 
+                 The arrays which hold the CAShapeLayers are for the purpose of removing the shapes when necessary (through the user action of clear and undo, or removing the circles and lines once a user finishes a cut and the cut shape is created. Adding from an appending an array in swift is of complexity O(1). %\cite (https://developer.apple.com/documentation/swift/array/3126937-append). 
+                 
+                 I wrote a method didTap() which takes in a UITapGestureRecognizer. The UITapGestureRecognizer contains information about the tap. I compared the colour of the pixels of the tap with the colour of the background with the methods getPixelColorAt() and comparePixels() which take in the location of the tap and the array of RGB colour respectively. The comparePixels() method returns true if the colour is within a given range. This is controlling for any minor image alterations for the match pattern portion of the app. The overlay image displayed can be slightly distorted in colour as I created the images by taking screenshots of cuts I had made in an earlier version of the application. This distortion is unable to be seen by the naked eye, however it is picked up when analysing the pixel colour. 
+                 
+                 If the user has tapped outside the virtual paper for their initial tap, a purple circle is displayed to indicate the start point. The circle is displayed and added to the circleArray. The initial tap is recorded, the tap counter is incremented and the co-ordinates added to the pathArray. 
+                 
+                 As the tapCount is now 1, the first if statement is skipped and there is a check to see if the current tap is within a 20 unit radius (the same size as the circles that are created) of the initial tap. 
+                 
+                 If it is not, a dotted line is created from the last point to the current point, and added to the lineArray. A clear circle displayed at the current point (to differentiate from the initial tap) and added to the circle array. The current tap co-ordinate is added to the pathArray, and finally the the tap count is incremented.
+                 
+                 This is repeated with as taps occur until the current tap is within a 20 unit radius of the initial tap. In this case, the shape is created. To do this, the path is looped through and a UIBezierPath is created out of the co-ordinated which forms the shape that is filled with the background colour. The shape is added to the shapeArray. The circleArray, pathArray, lineArray and tapCount are all reset and the dashedLine() function is called to bring the dashedLine to the front. 
+
+                %Create flow chart of above
             
-             \paragraph{}
-            undo and clear 
-            
-              I expanded the functionality of the undo buttons as I observed that the users were reaching for the undo and clear buttons when part-way through creating a shape. 
+             \paragraph{Undo and Clear}
+              I expanded the functionality of the undo button as I observed that the users were reaching for the it when part-way through creating a shape to edit their last point. 
+              
+              If there are partly constructed shapes, the last circles (and line if present) will be removed from view and then from the circleArray. The last line will also be removed from view and that line removed from the line array if the circle is not the inital point. An if statemnet checks to see if the arrays are empty before removing anything.
+              If only fully constructed shapes are present the last shape will be removed from the view and from the shape array. 
+              
+              The clear button will reset all the arrays and counters (shapeArray, circleArray, pathArray, lineArray and tapCount).
     
-
-
-``CreatePatternVC" handles the segue to ``RevealVC" transferring the foldValue and the screenshot taken.
 
     \subsubsection{Reveal}
-    
             \paragraph{}
-Uses the screenshot
-copies 
-transforms according to
-
+            When the reveal button is pressed on the create screen, ``CreatePatternVC", handles the segue to ``RevealVC" transferring the foldValue and takes a screenshot passing this image through to ``RevealVC". ``RevealVC" makes copies of this screenshot depending on how many segments the image will unfold to. Each copy is transfromed with appropriate parameters to create the unfolded image. 
+            
+            If the foldValue is 2, the copied are cropped, the image is flipped, to -1 in the horizontal directed esentially reflecting it, then it is translated to be opposite the unflipped segment. 
+            
+            For a foldValue of 4, the copies are cropped, one copy is flipped in the x direct, another the y directon and the other one, both direction. They are translated to their corresponding quadrant. 
+            
+            The foldValues of 6 and 8 were much harder to figure out as images can only be cropped with a rectangle. The solution is to add a "mask" to the image which is essentially creating a layer that makes the images underneath invisible with a polygon shaped hole of set dimensions where you can see the image below. 
+            
+            The relevant number of copies were made for the transformations of foldValues of 6 and 8. The transformation also involved roataions in radians this time as well as scaling and translating. 
+            
+            The challenge in this class was compressing all the code to the necessary steps. I created one function for transformations that was extrememly helpful when refactoring my code. 
 
 \begin{wrapfigure}{r}{0.25\textwidth}
                         \centering
@@ -761,49 +788,31 @@ transforms according to
                         \label{fig:kiriZen-createUnfoldedPattern}
                     \end{wrapfigure}
 
-        \subsubsection{Transformation}
-        
-                \paragraph{}
-                
-                Transformations
-                Scale
-                Refelctions
-                Rotations
-                Masks
-
-
 
     \subsection{Match Pattern}
-
-        \subsubsection{Target Shapes}
             \paragraph{}
-            Start Button
-             Randomly Generate Numbers
-             Named images
+            This section of the application is adding an additional challenge of asking the user to try and mimic the target image presented. Segues are also used here to carry over the foldvalue (and version number).
+           ``Match Pattern" displays a random target pattern to the user. Two random numbers are generated, one representing the foldValue, the other the version of the target pattern for this particular foldValue (there are 5 versions for each foldValue - 20 targets in total).
 
-    
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
                             \centering \includegraphics[width=0.7\linewidth]{KiriZen/simpleTarget.png}
-                            \caption{aaaaa}
+                            \caption{Simple Target Pattern}
                             \label{fig:kiriZen-simpleTarget}
                         \end{minipage}\hfill
                         \begin{minipage}{0.45\textwidth}
                             \centering
                             \includegraphics[width=0.7\linewidth]{KiriZen/complexTarget.png}
-                            \caption{aaaa}
+                            \caption{Complex Target Pattern}
                             \label{fig:kiriZen-complexTarget}
                         \end{minipage}
                     \end{figure}
                     
         \subsubsection{Match Create}
-    
             \paragraph{}
+            For the rest of the match pattern section, I inherited from the relevant classes in the create pattern section. This was important as this allowed me to reuse the code without copying it. It was also very useful as this helped features such as the buttons stay consistent, and the folded segments were the same. This helps user use recognition rather than recall making the application easier to use. In addition to the ``CreatePatternVC", the target button and overlay button were also added.
             
-            Inheritance 
-            Segue carries over target image numbers
-            Target Button
-            Overlay Button - alert
+            - alert
             Options
             Yes Counter – if they want to see it
             Reveal Button Segue
@@ -811,11 +820,9 @@ transforms according to
  \subsubsection{Reveal Match VC}
     
             \paragraph{}
-Inheritance
-Target Button
-Target Overlay – alpha 0.7
-
-
+            Inheritance
+            Target Button
+            Target Overlay – alpha 0.7
 
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
@@ -1005,7 +1012,7 @@ Target Overlay – alpha 0.7
                 
                 The mute button is an example of flexibility within the app most users did not mute the application while testing. In the future I could allow applications to test the application for a longer period of time / throughout the week to test the mindfulness aspect of the application which is difficult to test and measure in a short testing period. 
                 
-                 I could maybe edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue. 
+                 I could edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue as seen in \textbf{Figure~\ref{fig:kiriZen-createPattern}}).
                 
                 The overall reaction of the application was positive with minor edits necessary. The highest numeric value given was ``2" which reflects this and all heuristics passed. 
                 
@@ -1080,10 +1087,11 @@ Target Overlay – alpha 0.7
                 
                 There is still some room for improvement as pointed out in the heuristic evaluation. I could improve the usability by editing some features such as the target button to make it easier to use and have some pop-ups as pointers throughout upon the first use of the application. Given more time I could test on a wider range of users and evaluate their response to the edits that can be made in the application. 
                 
-                
                 Additional functionality could be added to the app such as an algorithm to generate random target images shaped but more sophisticated than randomly rendering shapes - some restrictions could apply such as shapes not touching - the variety of shapes etc.
                 
-                Algorithms for comparing target images to the image the user created
+                There could also be easy medium and hard levels or a next button within the match button section so the user can move on if required. 
+                
+                Algorithms for comparing target images to the image the user created.
 
                 When saving the final image, there could be options for crating a wallpaper. They could be created by repeating the patter
                 along the style of tessellations. 
@@ -1092,7 +1100,6 @@ Target Overlay – alpha 0.7
 \section{Conclusion}
         
             \paragraph{}
-            
             
             
             I have achieved my aims for the project by producing an idea for a kirigami themed application from scratch that I developed from into an final product I am proud of. The application has shown to a new audience that kirigami can be a relaxing recreational activity and I hope to inspire the users to physically recreate their favourite designs created via the application in real life.
