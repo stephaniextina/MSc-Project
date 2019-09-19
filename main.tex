@@ -688,61 +688,73 @@
     \clearpage
     
     \subsection{Overview}
-    \begin{wrapfigure}{r}{0.3\textwidth}
+        \subsection{Choose Fold}
+
+    \begin{wrapfigure}{r}{0.35\textwidth}
                         \centering
-                        \includegraphics[width=0.25\textwidth]{KiriZen/chooseFold.png}
+                        \includegraphics[width=0.3\textwidth]{KiriZen/chooseFold.png}
                         \caption{The display associated with ``ChooseFoldVC". The buttons represent the folds the piece of paper will be virtually folded into.}
                         \label{fig:kiriZen-chooseFold}
                     \end{wrapfigure}
     
-    \paragraph{}
-    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly. \hfill
-            \begin{wrapfigure}{l}{0.3\textwidth}
-                        \centering
-                        \includegraphics[width=0.25\textwidth]{KiriZen/createPattern.png}
-                        \caption{createPattern}
-                        \label{fig:kiriZen-createPattern}
-                    \end{wrapfigure}
-                    
-            \subsection{Choose Fold}
 
-                \paragraph{}
-                In the storyboard for ``ChooseFoldVC", I assigned a tag for each buttons related to how many segments the folds split the paper into. For the rest of this section I will refer to this value as the foldValue. Segues are transitions between view controllers which can be labelled in the storyboard. I added segues from each button to the next view controller.
+    \paragraph{}
+    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly.
+
+        \paragraph{}
+            In the storyboard for ``ChooseFoldVC", I assigned a tag for each buttons related to how many segments the folds split the paper into. For the rest of this section I will refer to this value as the foldValue. Segues are transitions between view controllers which can be labelled in the storyboard. I added segues from each button to the next view controller.
                     
             In the class ``ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable to the foldValue of the tag. This information is then carried to the next view controller overriding the ``prepare" function. This function transfers the foldValue information from ``ChooseFoldVC" to ``CreatePatternVC", by assigning the information from a variable in ``ChooseFoldVC" to a variable in ``CreatePatternVC".
                     
             The use of tags and segues is important as the button pressed in choose fold (and equivalent values for the target pattern produced later on in the Match Pattern section) determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers and determines how it will be transformed and revealed.
             
                 
-            \subsection{Create Pattern}
-                \paragraph{} 
-                Create Pattern VC
-                Layout Buttons, point to functions (Undo and Clear… expanded functionality with research)
-                Segue to instructions … next page
-                Link to Canvas
-
-            \subsection{Canvas}
-            \paragraph{}
-            Canvas - UIView
-            Info from Create Pattern VC buttons for shape to draw (CA Shape Layer / Draw)
-            Dashed line – redraw on top (bring to top)
-            Functionality of iphone
+            \subsection{Create Pattern and Canvas}
+                \paragraph{}
+                ``CreatePatternVC" is the view controller for the screen where cuts are created on the virtual folded piece of paper. This class displays the buttons in stack views. I grouped the buttons according to functionality with undo and clear next to each other and instructions/ information buttons are always blue in this application to keep consistency. 
+                
+                ``CreatePatternVC" creates a UIView called canvas where the functions associated with cutting can occur.
+                    
+                 \paragraph{}
+                 The foldValue determines which shape of what dimensions will be created in the draw function. When this function is called, the shape is drawn and the parameters for the dashed lines are set and the function to draw the dashed line is called. The lines indicate to the user the sides of the segment that were folded and can be seen in \textbf{Figure~\ref{fig:icon}}.
+                 When cuts are made from the shape, I wanted the dashed lines to appear intact so the user does not have to recall were the folds are. I decided to make the majority of shapes created of the type CAShapeLayer. This was to make it simple to layer the shapes in the order I desired. When cuts were made from the virtual paper, I could bring the dashed line shape to the front of the view easily. This effect is illustrated in \textbf{Figure~\ref{fig:icon}} with the ready cut shapes.
+                 
+                 The user can create the cuts by tapping on the screen. I made the decision that the user must be able to cut from the edge of the paper. This is to make the transition to real life easier if the user wanted to try out their creations. To cut with scissors, you must start of the edge of the paper, not in the middle. I decided that the
+                 
+                 as I do not wish to make the decision for the user which pieces they would like to keep, why not all?
+                 
+                 
+                 
             Tap location
             Get pixel colour
             Compare pixels
             To create shapes: circle, path and shape array and tap count
             
+            \begin{wrapfigure}{l}{0.4\textwidth}
+                        \centering
+                        \includegraphics[width=0.35\textwidth]{KiriZen/createPattern.png}
+                        \caption{The user has created three shapes and is partway through making the fourth. The dark purple circle represents the start of the shape they will cut. The clear circles represent the corners of the cuts with the dotted lines representing the edges of the cut.}
+                        \label{fig:kiriZen-createPattern}
+                    \end{wrapfigure}
             
+             \paragraph{}
+            undo and clear 
+            
+              I expanded the functionality of the undo buttons as I observed that the users were reaching for the undo and clear buttons when part-way through creating a shape. 
+    
 
-            \paragraph{} 
-      
 
+``CreatePatternVC" handles the segue to ``RevealVC" transferring the foldValue and the screenshot taken.
 
     \subsubsection{Reveal}
     
             \paragraph{}
-            
-            \begin{wrapfigure}{r}{0.25\textwidth}
+Uses the screenshot
+copies 
+transforms according to
+
+
+\begin{wrapfigure}{r}{0.25\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/createUnfoldedPattern.png}
                         \caption{Icon}
