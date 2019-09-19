@@ -469,7 +469,7 @@
     \subsection{Target User}
     
             \paragraph{}
-            Similar to the target audience for origami and kirigami there is no specific target age but an interest in Japanese culture and paper crafts is expected. As the name I have chosen for the app are Japanese words, the target audience will be drawn to it. I have highlighted a few key groups below. 
+            Similar to the target audience for origami and kirigami there is no specific target age but an interest in Japanese culture and paper crafts is expected. As the name I have chosen for the app are Japanese words, this target audience will be drawn to it. I have highlighted a few key groups below. 
             
             \paragraph{Children}
             This application is especially beneficial for children. Visualising how the shapes they are creating will unfold, or how the shapes already created can be created from a single folded component, they will practice mathematical skills such as geometry, fractions and spacial awareness.
@@ -610,13 +610,12 @@
 
 \subsection{Requirements}
     
-    \subsubsection{Functional Requirements}
+    \subsubsection{Functional}
     
     \begin{enumerate}
       \item Home Screen
         \begin{enumerate}[label*=\arabic*.]
         \item The application must allow the users to select a ``Create Pattern" button or a ``Match pattern" button linking them to the relevant screen.
-        \item The application could have music playing in the background controlled via a button on the home screen
         \item The application could have an information page linked from the home screen.
         \item The application could have background music controlled via an button on the home page.
       \end{enumerate}
@@ -630,11 +629,14 @@
       \begin{enumerate}[label*=\arabic*.]
         \item The application must display the corresponding shape of the folded piece of paper depending on which fold was selected in the previous screen.
         \item The application must indicate which side(s) are folded via the display of a dashed line(s).
-        \item The application must allow the user to tap on screen outside the virtually folded paper to start a cut. 
-        \item The application must allow the user to tap on screen to start a cut.
+        \item The application must only allow the user to tap on screen outside the virtually folded paper to start a cut. 
+        \item The application must allow the user to tap on screen to set the corners of a cut.
         \item The application should indicate to the user where the start of their cut.
         \item The application should allow the user to complete their cut by tapping near the start of their cut. 
         \item The application must display the reveal screen upon selection of a corresponding button.  
+         \item The application should have an undo button.
+          \item The application should have a clear button.
+        \item The application should have an instructions page available on the cut screens. 
       \end{enumerate}
       
       \item Match Pattern
@@ -645,21 +647,21 @@
         \item The application should allow the user to select an overlay option for help.
       \end{enumerate}
 
-      \item Reveal
-        \begin{enumerate}[label*=\arabic*.]
-        \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual piece of paper. 
-        \item The application must allow the user to compare their pattern with the target pattern when selected via the match pattern section.
-        \item The application could allow the user to share their virtual unfolded creation to other applications. 
-         \item The application could have a pinch zoom feature for the virtual unfolded creation 
-        \item The application could allow the user to save their virtual unfolded creation to their camera roll.
-      \end{enumerate}
-    \end{enumerate}
+       \item Reveal
+          \begin{enumerate}[label*=\arabic*.]
+            \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual piece of paper. 
+            \item The application must allow the user to compare their pattern with the target pattern when selected via the match pattern section.
+            \item The application could have a pinch zoom feature for the virtual unfolded creation 
+            \item The application could allow the user to save their virtual unfolded creation to their camera roll.
+            \item The application could have a share button exporting the image to other applications. 
+          \end{enumerate}
+        \end{enumerate}
 
     
    \subsubsection{ Non-Functional}
     
     \begin{enumerate}
-        \item   Performance
+        \item Performance
             \begin{enumerate}[label*=\arabic*.]
             \item The application should respond to the users touch within 0.5 seconds while making the cuts.
             \item The application should take no longer than 5 seconds to load up after it has been downloaded onto the iPhone.
@@ -671,70 +673,56 @@
             \item The average user should be able to understand the flow/navigation of app easily.
             \end{enumerate}
             
-        \item Supportability
-            \begin{enumerate}[label*=\arabic*.]
-            \item The application shall be available on iPhone 7,8 ..check
-            \end{enumerate}
-            
-        \item Dependability
-            \begin{enumerate}[label*=\arabic*.]
-            \item The application shall be available
-            \item The application shall be updated to the latest version 
-            \end{enumerate}
-            
         \item Availability
             \begin{enumerate}[label*=\arabic*.]
-            \item 
+            \item The application must be available on iPhone 7 and 8.
             \end{enumerate}
             
-        \item Scalability
+        \item Reliability
             \begin{enumerate}[label*=\arabic*.]
-            \item The system must be able to accommodate an increasing amount of work. 
-            \end{enumerate} 
-            
-        \item Maintainability
-            \begin{enumerate}[label*=\arabic*.]
-            \item %This relates to the ease at which your app finds bugs and fixes.
+            \item The application must perform as specified.
+            \item The application shall be available 99\% of the time 24/7.
             \end{enumerate}
          
     \end{enumerate}
-
+    \clearpage
     
-    \subsection{Overview}  
-    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly.
-    
-            \subsection{Choose Fold}
-                    
-            \subsubsection{Segue}
-            In the storyboard I assigned a tag with each buttons in choose fold depending on how many folds they were associated with. In the storyboard also added segues from each button to the next view controller. Segues are transitions between view controllers which can be named. In the class ``ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable (buttonPressed) to the value of the tag. This information is then carried to the next view controller using prepare for segue function.
-            
-                         \begin{wrapfigure}{l}{0.25\textwidth}
+    \subsection{Overview}
+    \begin{wrapfigure}{r}{0.3\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/chooseFold.png}
-                        \caption{choose}
+                        \caption{The display associated with ``ChooseFoldVC". The buttons represent the folds the piece of paper will be virtually folded into.}
                         \label{fig:kiriZen-chooseFold}
                     \end{wrapfigure}
-                    
-            The use of tags and segues is important as the button pressed in choose fold determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers and determines how it will be transformed and revealed.
-            
-                
-            \subsection{Create Pattern}
-             \begin{wrapfigure}{l}{0.25\textwidth}
+    
+    \paragraph{}
+    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could see clearly which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly. \hfill
+            \begin{wrapfigure}{l}{0.3\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/createPattern.png}
-                        \caption{Icon}
+                        \caption{createPattern}
                         \label{fig:kiriZen-createPattern}
                     \end{wrapfigure}
                     
+            \subsection{Choose Fold}
+
+                \paragraph{}
+                In the storyboard for ``ChooseFoldVC", I assigned a tag for each buttons related to how many segments the folds split the paper into. For the rest of this section I will refer to this value as the foldValue. Segues are transitions between view controllers which can be labelled in the storyboard. I added segues from each button to the next view controller.
+                    
+            In the class ``ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable to the foldValue of the tag. This information is then carried to the next view controller overriding the ``prepare" function. This function transfers the foldValue information from ``ChooseFoldVC" to ``CreatePatternVC", by assigning the information from a variable in ``ChooseFoldVC" to a variable in ``CreatePatternVC".
+                    
+            The use of tags and segues is important as the button pressed in choose fold (and equivalent values for the target pattern produced later on in the Match Pattern section) determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers and determines how it will be transformed and revealed.
+            
+                
+            \subsection{Create Pattern}
                 \paragraph{} 
                 Create Pattern VC
                 Layout Buttons, point to functions (Undo and Clear… expanded functionality with research)
                 Segue to instructions … next page
                 Link to Canvas
 
-
             \subsection{Canvas}
-            
+            \paragraph{}
             Canvas - UIView
             Info from Create Pattern VC buttons for shape to draw (CA Shape Layer / Draw)
             Dashed line – redraw on top (bring to top)
@@ -776,13 +764,12 @@
     \subsection{Match Pattern}
 
         \subsubsection{Target Shapes}
-            
+            \paragraph{}
             Start Button
              Randomly Generate Numbers
              Named images
 
     
-            \paragraph{}
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
                             \centering \includegraphics[width=0.7\linewidth]{KiriZen/simpleTarget.png}
