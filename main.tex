@@ -330,18 +330,18 @@
             \subsubsection{Paper Cut Craft}
             
                 \paragraph{Type:} iPhone application \cite{PaperCutCraft}
-                 
-                 \begin{wrapfigure}{r}{0.25\textwidth}
-                    \includegraphics[width=0.25\textwidth]{Images/paperCutCraftCut}
-                    \captionsetup{{margin = 0.2cm}}
-                    \caption{This is a typical level in Paper Cut Craft. The line drawn in this figure results in the cut shown in \textbf{Figure~\ref{fig:paperCutCraftReveal}}.}
-                    \label{fig:paperCutCraftCut}
-                \end{wrapfigure}
                 
                 \paragraph{Description:} This application is for cutting a piece of paper into the target shape. 
                 
                 \paragraph{Strengths:}
                 The cutting feature can be quite realistic at times. The line follows the users touch and is generally quite smooth. After a cut is made, the paper has an animation where the cut half falls off which is a good additional feature.
+                
+                \begin{wrapfigure}{r}{0.25\textwidth}
+                    \includegraphics[width=0.25\textwidth]{Images/paperCutCraftCut}
+                    \captionsetup{{margin = 0.2cm}}
+                    \caption{This is a typical level in Paper Cut Craft. The line drawn in this figure results in the cut shown in \textbf{Figure~\ref{fig:paperCutCraftReveal}}.}
+                    \label{fig:paperCutCraftCut}
+                \end{wrapfigure}
                 
                 \paragraph{Weaknesses:}
                 While using the app, on occasion the cutting action stops working. The app creates a line representing a cut as usual, but it does not result in the paper being cut. After this occurs, there is no way to progress in the app even if the refresh button is used. There is another glitch where only the thin line drawn is cut from the screen rather than the entire section of paper the user would expect. For example if a circle is drawn, only the outline is cut, not a hollow circle. 
@@ -450,7 +450,7 @@
             \subsection{First Generation}
                     
                 \paragraph{}
-                Initially I created sketches of views for the first generation prototype and used the application ``POP - Prototyping on Paper" \cite{POP} to make the sketches interactive. The application allows you to create links from one page to another for specified areas of the sketch. This allows the user to essentially click on buttons to link them to the next screen as seen in \textbf{Figure~\ref{fig:popLinks}}. I linked the screens shown in  \textbf{Figure~\ref{fig:popMultiple}} via the relevant buttons so the user can walk through the application as if they were using it.
+                Initially I created sketches of views for the first generation prototype and used the application ``POP - Prototyping on Paper" \cite{POP} to make the sketches interactive. The application allows you to create links from one page to another for specified areas of the sketch. This allows the user to essentially click on buttons to link them to the next screen, as seen in \textbf{Figure~\ref{fig:popLinks}}. I linked the screens shown in  \textbf{Figure~\ref{fig:popMultiple}} via the relevant buttons so the user can walk through the application as if they were using it.
                 
                 I used this POP application to test my prototype out on potential users. The feedback was mainly positive, especially as wire frames are not commonly interactive which allowed for a more authentic user experience. The diagrams were clear so it was easy for the user to understand the concept of the app even with just links to the different pages as the interactivity.
                 Link to my specific POP project: https://marvelapp.com/c49jjie
@@ -577,7 +577,7 @@
     \begin{enumerate}
       \item Home Screen
         \begin{enumerate}[label*=\arabic*.]
-        \item The application must allow the users to select a ``Create Pattern" button or a ``Match pattern" button linking them to the relevant screen.
+        \item The application must allow the users to select a ``Create Pattern" button or a ``Match Pattern" button, linking them to the relevant screen.
         \item The application could have an information page linked from the home screen.
         \item The application could have background music controlled via a button on the home page.
       \end{enumerate}
@@ -613,7 +613,7 @@
           \begin{enumerate}[label*=\arabic*.]
             \item The application must show the user an unfolded version of their cuts from the corresponding folded virtual piece of paper. 
             \item The application must allow the user to compare their pattern with the target pattern when selected via the match pattern section.
-            \item The application could have a pinch zoom feature for the virtual unfolded creation 
+            \item The application could have a pinch zoom feature for the virtual unfolded creation.
             \item The application could allow the user to save their virtual unfolded creation to their camera roll.
             \item The application could have a share button exporting the image to other applications. 
           \end{enumerate}
@@ -702,7 +702,7 @@
                       \end{center}
                     \end{table}
                     
-                 To implement the cutting function, I used a number of data structures to hold information. These data structures are described in \textbf{Table~\ref{tab:table1}}. The arrays which hold the CAShapeLayers are for the purpose of removing the shapes when necessary (through the user action of clear and undo, or removing the circles and lines once a user finishes a cut and the cut shape is created. It is important to not that adding to an array in swift (.append) is of complexity O(1) \cite{O1}.
+                 To implement the cutting function, I used a number of data structures to hold information. These data structures are described in \textbf{Table~\ref{tab:table1}}. The arrays which hold the CAShapeLayers are for the purpose of removing the shapes when necessary (through the user action of clear and undo, or removing the circles and lines once a user finishes a cut and the cut shape is created. It is important to note that adding to an array in swift (.append) is of complexity O(1) \cite{O1}.
                  
                  I wrote a method didTap() which takes in a UITapGestureRecognizer. The UITapGestureRecognizer contains information about the tap. I compared the colour of the pixels at the location of the tap with the colour of the background. I did this with the methods getPixelColorAt() and comparePixels() which take in the location of the tap and the array of RGB colours of the tap location respectively. The comparePixels() method returns true if the colour is within a given range. This controls for any minor image alterations for the match pattern portion of the app. The overlay image displayed can be slightly distorted in colour as I created the images by taking screenshots of cuts I had made in an earlier version of the application. This distortion is unable to be seen by the naked eye, however it is picked up when analysing the pixel colour. 
                  
@@ -748,7 +748,7 @@
                     
             The foldValues of 6 and 8 were much harder to display as images can only be cropped with a rectangle. The solution is to add a CALayer ``mask" to the image which is essentially creating a layer that makes the images underneath invisible with a polygon shaped hole of set dimensions where you can see the image below.
             
-            The relevant number of copies were made for the transformations of foldValues of 6 and 8. The transformation also involved rotations in radians this time as well as scaling and translating similar to before.
+            The relevant number of copies were made for the transformations of foldValues of 6 and 8. The transformation also involved rotations in radians, as well as scaling and translating similar to before.
                     
             As there were so many copies of the segments that needed displaying in some cases, a challenge in this class was compressing all the code to the necessary steps. I created one function for transformations that was extremely helpful when refactoring my code as this method was called for almost every copy of the pattern. 
             
@@ -782,7 +782,7 @@
                         \label{fig:kiriZen-overlayPopUp}
                     \end{wrapfigure}
                     
-                    In addition to the ``CreatePatternVC", a target button and overlay button were also added as seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}} and \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. When the overlay button is pressed, an alert is created. It warns the users that pressing this button will show them how to create the pattern and is a big help in solving the challenge. An example of the overlay alert is seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}}. The UIAlertController is used which will be a familiar format for the iPhone user. A counter is incremented when the user selects "Yes" for the first time. The overlay button will then toggle between revealing the solution and removing it from the view when pressed. The overlay button is highlighted in blue when the overlay is visible as seen in \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. The important aspect of overlay image is that it must be aligned precisely with shape of the virtual segment of paper underneath. The image has an alpha value of 0.5 meaning it is halfway between totally transparent (0) and opaque (1.0) so the user can see both their cut, and the cuts they are aiming for. 
+                    In addition to the ``CreatePatternVC", a target button and overlay button were also added as seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}} and \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. When the overlay button is pressed, an alert is created. It warns the users that pressing this button will show them how to create the pattern and is a clue in solving the challenge. An example of the overlay alert is seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}}. The UIAlertController is used which will be a familiar format for the iPhone user. A counter is incremented when the user selects "Yes" for the first time. The overlay button will then toggle between revealing the solution and removing it from the view when pressed. The overlay button is highlighted in blue when the overlay is visible as seen in \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. The important aspect of overlay image is that it must be aligned precisely with shape of the virtual segment of paper underneath. The image has an alpha value of 0.5 meaning it is halfway between totally transparent (0) and opaque (1.0) so the user can see both their cut, and the cuts they are aiming for. 
                     
                     The target button will display the target image to the user when held down. This is so the user does not have to return to the previous screen to see the target which would reset their progress. There are various events that can occur depending on the users physical interaction with a button on screen shown in \textbf{Table~\ref{tab:table2}}.
                     
@@ -813,14 +813,14 @@
                         \begin{minipage}{0.45\textwidth}
                             \centering
                             \includegraphics[width=0.7\linewidth]{KiriZen/matchUnfoldedPattern}
-                            \caption{This the what the user will see when they hold down the target button on the reveal page. The can see the outline of the shape they were aiming for and can compare it to their creation.}
+                            \caption{This the what the user will see when they hold down the target button on the reveal page. They can see the outline of the shape they were aiming for and can compare it to their creation.}
                             \label{fig:kiriZen-matchUnfoldedPattern}
                         \end{minipage}
                     \end{figure}
             
  \subsubsection{Reveal Match VC}
             \paragraph{}
-            ``RevealMatchVC" inherits from ``RevealVC" therefore using the foldValue information passed via segues, it can construct the unfolded image as before in the create pattern section. There is an additional feature on this screen of the target button. When held down, the target is overlayed onto the image which was created to allow the user to compare their creation with the target their were aiming for. The target image has an alpha value of 0.7 allowing the user to see their image underneath as in \textbf{Figure~\ref{fig:kiriZen-matchUnfoldedPattern}}.
+            ``RevealMatchVC" inherits from ``RevealVC" therefore using the foldValue information passed via segues, it can construct the unfolded image as before in the create pattern section. There is an additional feature on this screen of the target button. When held down, the target is overlayed onto the image which was created to allow the user to compare their creation with the target they were aiming for. The target image has an alpha value of 0.7 allowing the user to see their image underneath as in \textbf{Figure~\ref{fig:kiriZen-matchUnfoldedPattern}}.
 
 \clearpage
 \newpage
@@ -874,12 +874,12 @@
                         \end{minipage}
                     \end{figure}
                 
-                The share functionality was simple as there is a UI Activity View Controller (revealed in figure). Since the application does not contain sensitive information, I decided that there is no need to restrict the icons that appear in the view controller so the user is free to share their creation however they desire. The UI Activity View Controller is also a feature used in many applications so the user will be familiar with it and can interact seamlessly to share to their desired destination. The image shared has been cropped to just include the image of the unfolded paper and not the surrounding text or buttons. There was also feedback to include a print function which the user is able to do via this feature. The users responded very well to the save and share button as social media is such a big part of today's culture. I underestimated the positive response this feature would get.
+                The share functionality was simple as there is a UI Activity View Controller (revealed in figure). Since the application does not contain sensitive information, I decided that there is no need to restrict the icons that appear in the view controller so the user is free to share their creation however they desire. The UI Activity View Controller is also a feature used in many applications so the user will be familiar with it and can interact seamlessly to share to their desired destination. The image shared has been cropped to just include the image of the unfolded paper and not the surrounding text or buttons. There was also feedback to include a print function which the user is able to do via this feature. The users responded very well to the save and share button as social media is such a major part of today's culture. I underestimated the positive response this feature would get.
             
              \subsubsection{Music Player}
                          \paragraph{}
 
-                I found relaxing music from from a free stock music website \cite{Lofi}  
+                I found relaxing music from a free stock music website \cite{Lofi}  
                 and contacted the creator to get permission to use it in KiriZen. I added the music to enhance the mindfulness aspect of the application.
                 
                 There is a mute button (shown in \textbf{Figure~\ref{fig:kiriZen-main}}) which changes to mute if clicked. To add the music I used an online tutorial \cite{MusicPlayer}.
@@ -933,7 +933,7 @@
            Throughout the project I asked my peers to test out the app and I observed how they interacted with it. For example, I observed that other users had larger hands and fingers than mine so the application was harder to interact with. I addressed this issue by enlarging the button size, and the radius of the initial circle so they do not have to be as precise when ending the cut. In addition to this, I was informed by the users that the icons on the initial screen were very small when side by side so I made the decision to enlarge them and stack them vertically to see the icon image more clearly. 
            
            \paragraph{Undo and Clear Functionality}
-           I observed the user interacting with app and at first I only had the undo and clear buttons delete the cut shapes. However I noticed that the users also wanted this function while drawing their shape to edit their last point. After I incorporated this additional undo functionality, I observed new users interact with the application and they appeared to use this functionality with ease which I took to imply this functionality is expected. 
+           I observed the user interacting with app and at first I only had the undo and clear buttons delete the cut shapes. However I noticed that the users also wanted this function while drawing their shape to edit their last point. After I incorporated this additional ``Undo" functionality, I observed new users interact with the application and they appeared to use this functionality with ease which I took to imply this functionality is expected. 
            
            \paragraph{Cutting the Shapes}
            Some more feedback that was provided by the users was that they would like lines between the circles so they can see the outline of the shape they are drawing before it is finalised, rather than imagining the lines. I added lines with small dashes to illustrate that this is where the cuts will occur and the users responded positively to this. 
@@ -945,16 +945,16 @@
 
                 
                 \paragraph{Visibility of system status}
-                The application generally keeps users informed as to the status of their actions. For example, the buttons show a response. The addition of pop ups indicate to the user that they should start cutting was suggested. 
+                The application generally keeps users informed as to the status of their actions. For example, the buttons show a response. The addition of pop-ups indicate to the user that they should start cutting was suggested. 
                 
                 \paragraph{Match between system and real world}
                 The functionality of the buttons is clear. The application is fairly realistic.
                 
                 \paragraph{User control and freedom}
-                The in built navigation allows users to escape the current screen easily. The undo and clear allows the users to edit their patterns as they go easily and intuitively. 
+                The in built navigation allows users to escape the current screen easily. The undo and clear allows the users to edit their patterns as they go, easily and intuitively. 
 
                 \paragraph{Consistency and standards}
-                The buttons are in the same place in both parts of the application so the users do not have to search for their positions. The user interface creates cuts that are predictable. The theme is present throughout, likely due to colour scheme.
+                The buttons are in the same place in both parts of the application so the users do not have to search for their positions. The user interface creates cuts that are predictable. The theme is present throughout, due to colour scheme.
 
                 \paragraph{Error prevention}
                 Unauthorised actions such as users starting a cut from the inside of the virtual blue paper, are prevented. Users are able to undo both types of actions e.g. undo a shape if that was the last thing created or undo a circle and path (indicating a new point) if that was last. Clear button can reset the page. 
@@ -969,18 +969,19 @@
                 The users reported that the application was flexible and efficient. The majority of the buttons have a quick response time. The target button needs some indication that you need to hold it down.
 
                 \paragraph{Minimalist design}
-                The application is clear overall without clutter making it east to use. Users agrees the design is minimalistic. 
+                The application is clear overall without clutter, making it easy to use. Users agreed the design is minimalistic. 
 
                 \paragraph{Help error recovery}
                 Errors did not occur while the users were testing the application. Errors that could occur would likely be associated with the save/ share feature.
 
                 \paragraph{Help and documentation} 
-                The animation is helpful and the user can understand what to do after reading it. One user suggested adding instructions to the home screen page and changing the ``i" to an about button.
+                The animation is helpful and the user can understand what to do after reading it. One user suggested adding instructions to the home screen page and changing the ``i" button to an ``About" button.
                 
                 \subsubsection{Heuristics Conclusion}
+                \paragraph{}
                 A few pop-ups would increase the ease of use of the app and allow the user to learn how to use the app faster, e.g. ``Tap here" if the user does not start the cut within a few taps. I could try to figure out some ways the users can accelerate function such as cutting, undo etc. to increase flexibility and efficiency. 
                 
-                The mute button is an example of flexibility within the app most users did not mute the application while testing. In the future I could allow applications to test the application for a longer period of time / throughout the week to test the mindfulness aspect of the application which is difficult to test and measure in a short testing period. 
+                The mute button is an example of flexibility within the app most users did not mute the application while testing. In the future I could allow users to test the application for a longer period of time / throughout the week to test the mindfulness aspect of the application which is difficult to test and measure in a short testing period. 
                 
                  I could edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue as seen in \textbf{Figure~\ref{fig:kiriZen-createPattern}}).
                 
@@ -992,10 +993,10 @@
         \paragraph{}
         When I have sufficient funds, I could potentially publish this application on the App Store. Before this takes place, the code should be tested on the latest beta version of Xcode software as it will contain extra upcoming features I will be able to test it on the updates that will be released shortly in the future (this is the purpose of the beta version). I will test it on other iOS devices other than iPhone 7/8 and edit the application accordingly.
         
-        I would need to decide whether I would like to charge users for the app, or make it free. I believe a free app is more appropriate, especially for the target users and I myself would prefer an unpaid application. However, as discussed in background research I would need to make sure the advertisements do not disrupt the user experience. As my goal is to create an application that is relaxing for users to use and not to make money, I could consider taking away all advertisements and making the app completely free.
+        I would need to decide whether I would like to charge users for the app, or make it free. I believe a free app is more appropriate, especially for the target users and I, myself would prefer an unpaid application. However, as discussed in background research I would need to make sure the advertisements do not disrupt the user experience. As my goal is to create an application that is relaxing for users to use and not to make money, I could consider taking away all advertisements and making the app completely free.
         
         I would need to test this on a greater variety of users to see if I have fully achieved what I aimed for with this application as it was mostly my peers.  I can publish the application as test version to get user feedback on websites such as TestFlight \cite{TestFlight}.
-        I could then check the user reviews and make an appropriate edits if necessary. 
+        I could then check the user reviews and make appropriate edits if necessary. 
         
         If I published the application near Christmas, I could incorporate seasonal marketing. For example, extra snowflake designs for the target patterns, falling snowflake animations and wallpapers could be used in order to attract users at that time of year.
         
@@ -1005,12 +1006,12 @@
         \paragraph{}
         I created an application from scratch in a new language I was not familiar with which was a daunting task. The majority of users reported that they felt relaxed whilst using the application, confirming that it can be used as an effective part of the mindfulness practice. The background research I produced turned out to be extremely useful throughout the project. Whilst carrying out my investigation, I was surprised with how few of the apps had a reliable cutting features and there were many inconsistencies throughout. The application I created is unlike these as the cutting features are predictable which was confirmed in the evaluation. The users also confirmed that the buttons and theme were consistent. I am satisfied that I implemented all of the major requirements successfully, and was able to make improvements through adding smaller non-core features.
         
-        I successfully made use of inheritance in the match pattern section of the application to reuse code already created rather than repeating it. I created a common buttons class with methods that create a subset of features of the buttons. This kept all the buttons consistent and I did not have to repeat the code upon each creation of a button. I learnt that refactoring my code, especially in the reveal section, by creating a transform function, helped to make my code easier to read and reduced the quantity. Throughout, I named my variables carefully which made it very easy to understand my thought process and the progression of the function when I looked at a section of code after a longer period of time. 
+        I successfully made use of inheritance in the match pattern section of the application to reuse code already created rather than repeating it. I created a common buttons class with methods that create a subset of features of the buttons. This kept all the buttons consistent and I did not have to repeat the code upon each creation of a button. I learnt that refactoring my code, especially in the reveal section, by creating a transform function, helped to make my code easier to read and reduced the quantity. Throughout my code, I named the variables carefully which made it very easy to understand my thought process and the progression of the function when I looked at a section of code after a longer period of time. 
         
     \subsection{Challenges}
     
         \paragraph{}
-        It was very challenging to create this application as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. For example, I attempted a few other methods of cutting before settling on the method similar to that of Paper Snowflake Maker which was the best method found in the background research. This trial and error slowed the process down, however, I had a contingency plan in place where I left some time to spare that could be filled if required. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use.
+        It was very challenging to create this application as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. For example, I attempted a few other methods of cutting before settling on the method similar to that of Paper Snowflake Maker, which was the best method found in the background research. This trial and error slowed the process down, however, I had a contingency plan in place where I left some time to spare that could be filled if required. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use.
         
         I had trouble layering the shapes on the screen when I was using different formats, which is why I decided to make the majority of objects on screen CA shapes. I eventually understood how to layer the objects and when to rearrange them. CA shapes were very helpful when creating the revealed version of the folds, created from triangular segments, as I used them as a mask to crop the copies to a triangle.
         
