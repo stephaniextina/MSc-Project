@@ -695,13 +695,13 @@
                       \label{tab:table1}
                         \begin{tabular}{|l|l|p{8cm}|}\hline
                           \textbf{Varibale Name} & \textbf{Type} & \textbf{Comments}\\\hline
-                          tapPoint & CGPoint \centering & contains the co-ordinates of the tap.\\\hline
-                          initialTap & CGPoint & contains the co-ordinates of the initial tap.\\\hline
-                          tapCount & Int & incremented with each tap. It helps to determine the progression of the shape being created.\\\hline
-                          shapesArray & [CAShapeLayer] & contains the shapes that have been created.\\\hline
-                          pathArray & [CGPoints] & points for the corners of the shape being created.\\\hline
-                          circleArray & [CAShapeLayer] & contains all the circles that are created that represent the corners of the shape.\\\hline
-                          lineArray & [CAShapeLayer] & contains the dotted lines representing the edges of the shape.\\\hline
+                          tapPoint & CGPoint \centering & Contains the co-ordinates of the tap.\\\hline
+                          initialTap & CGPoint & Contains the co-ordinates of the initial tap.\\\hline
+                          tapCount & Int & Incremented with each tap. It helps to determine the progression of the shape being created.\\\hline
+                          shapesArray & [CAShapeLayer] & Contains the shapes that have been created.\\\hline
+                          pathArray & [CGPoints] & Contains points for the corners of the shape being created.\\\hline
+                          circleArray & [CAShapeLayer] & Contains all the circles that are created that represent the corners of the shape.\\\hline
+                          lineArray & [CAShapeLayer] & Contains the dotted lines representing the edges of the shape.\\\hline
                          
                         \end{tabular}
                       \end{center}
@@ -790,7 +790,27 @@
                         \label{fig:kiriZen-overlayPopUp}
                     \end{wrapfigure}
                     
-                    In addition to the ``CreatePatternVC", the target button and overlay button were also added as seen in \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. When the overlay button is pressed, an alert is created which asks the user. This warns the users that pressing this button will show the users how to create the pattern and is a big help in solving the challenge. An example of the overlay alert is seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}}.
+                    In addition to the ``CreatePatternVC", a target button and overlay button were also added as seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}} and \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. When the overlay button is pressed, an alert is created. It warns the users that pressing this button will show them how to create the pattern and is a big help in solving the challenge. An example of the overlay alert is seen in \textbf{Figure~\ref{fig:kiriZen-overlayPopUp}}. The UIAlertController is used which will be a familiar format for the iPhone user. A counter is incremented when the user selects "Yes" for the first time. The overlay button will then toggle between revealing the solution and removing it from the view when pressed. The overlay button is highlighted in blue when the overlay is visible as seen in \textbf{Figure~\ref{fig:kiriZen-matchCreateOverlay}}. The important aspect of overlay image is that it must be aligned precisely with shape of the virtual segment of paper underneath. The image has an alpha value of 0.5 meaning it is halfway between totally transparent (0) and opaque (1.0) so the user can see both their cut, and the cuts they are aiming for. 
+                    
+                    The target button will display the target image to the user when held down. This is so the user does not have to return to the previous screen to see the target which would reset their progress. There are various events that can occur depending on the users physical interaction with a button on screen shown in \textbf{Table~\ref{tab:table2}}.
+                    
+                    \begin{table}[h!]
+                      \begin{center}
+                      \caption{Actions for user interaction}
+                      \label{tab:table2}
+                        \begin{tabular}{|l|p{8cm}|}\hline
+                          \textbf{Action Name} & \textbf{Action Trigger}\\\hline
+                            touchDown & The user presses down on the button within its boundaries (occurs before touchUpInside) \\\hline
+                            touchUpInside & The user presses down on the button within its boundaries (occurs after touchDown) \\\hline
+                            touchCancel & The touch is cancelled (system trigger) \\\hline
+                            touchDragOutside & The users drags their finger outside the button's boundaries\\\hline
+                        \end{tabular}
+                      \end{center}
+                    \end{table}
+                    
+                    The target button displays the target image with the ``touchDown" action, and removes the image with ``touchUpInside", ``touchCancel", and ``touchDragOutside". Without this, the target image would be left on the screen if the user performs certain actions or if the system cancels an action. This would allow the user to be able cut shapes on the background screen even with it being blocked by the target image creating a problem similar to that of the the problem seen in \textbf{Figure~\ref{fig:peppaGlitchLine}}. In addition the user may not be able to remove the target image from view. 
+                    
+                    The overlay button is activated when touchDown or touchDragOutside occurs which will show the alter until ``Yes" is selected. It will subsequently add or remove the overlay from the screen when pressed (depending on if it is already displayed or not).
                     
                     \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
@@ -806,20 +826,11 @@
                         \end{minipage}
                     \end{figure}
             
-            - alert
-            Options
-            Yes Counter – if they want to see it
-            Reveal Button Segue
-
  \subsubsection{Reveal Match VC}
     
             \paragraph{}
-            Inheritance
-            Target Button
             Target Overlay – alpha 0.7
 
-            \paragraph{}
-            
 \clearpage
 \newpage
 \section{Human Computer Interaction}
@@ -982,7 +993,7 @@
                 
                  I could edit the colours of buttons to group their functionality e,g, undo and clear of a different colour to the other buttons. I do this with the information and instructions button which are always blue as seen in \textbf{Figure~\ref{fig:kiriZen-createPattern}}).
                 
-                The overall reaction of the application was positive with minor edits necessary. The highest numeric value given was ``2" which reflects this and all heuristics passed. 
+                The overall reaction of the application was positive with minor edits necessary. All heuristics were passed by the evaluators. The highest numeric value given was ``2" which is associated with minor usability problem.
                 
         
 
@@ -1135,6 +1146,19 @@
     
     \newpage
 \Section{Appendix A}
+Numeric Score Values:
+
+0 - Don’t agree that this is a usability problem
+
+1 - Cosmetic problem 
+
+2 - Minor usability problem
+
+3 - Medium problem (users can adapt) 
+
+4 - Major usability problem
+
+5 - Usability catastrophe
 
     \begin{figure}[!ht]
             \centering
