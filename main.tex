@@ -650,7 +650,6 @@
     \clearpage
     
     \subsection{Overview}
-        \subsection{Choose Fold}
 
     \begin{wrapfigure}{r}{0.35\textwidth}
                         \centering
@@ -661,14 +660,16 @@
     
 
     \paragraph{}
-    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could clearly see which classes were interacting. The Navigation controller was used so the user will be familiar with the flow of the app quickly.
+    I used the storyboard in Xcode to lay out the general overview of the application. This visualisation was handy when creating segues between the classes as I could clearly see which classes were interacting. The Navigation Controller was used so the user will be familiar with the flow of the app quickly. The Navigation Controller is the bar at the top of \textbf{Figure~\ref{fig:kiriZen-chooseFold}} and is present on all screens.
+    
+        \subsection{Choose Fold}
 
         \paragraph{}
             In the storyboard for ``ChooseFoldVC", I assigned a tag for each button related to how many segments the folds split the paper into. For the rest of this section I will refer to this value as the foldValue. Segues are transitions between view controllers which can be labelled in the storyboard. I added segues from each button to the next view controller.
                     
             In the class ``ChooseFoldVC", when one of the buttons in \textbf{Figure~\ref{fig:kiriZen-chooseFold}} is pressed, I assign a variable to the foldValue of the tag. This information is then carried to the next view controller overriding the ``prepare" function. This function transfers the foldValue information from ``ChooseFoldVC" to ``CreatePatternVC", by assigning the information from a variable in ``ChooseFoldVC" to a variable in ``CreatePatternVC".
                     
-            The use of tags and segues is important as the button pressed in choose fold (and equivalent values for the target pattern produced later on in the Match Pattern section) as it determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers. It also determines the number of copies of the created pattern, and how they will be transformed and revealed.
+            The use of tags and segues is important as the button pressed in ``ChooseFoldVC" (and equivalent values for the target pattern produced later on in the Match Pattern section) as it determines the shapes drawn representing the virtual piece of paper of the upcoming view controllers. It also determines the number of copies of the created pattern, and how they will be transformed and revealed.
             
                 
             \subsection{Create Pattern and Canvas}
@@ -678,10 +679,10 @@
                 ``CreatePatternVC" creates a UIView called canvas where the functions associated with cutting can occur.
                     
                  \paragraph{Cutting Shapes}
-                 The foldValue determines which shape of what dimensions will be created in the draw function. When this function is called, the shape is drawn and the parameters for the dashed lines are set and the function to draw the dashed line is called. The lines indicate to the user the sides of the segment that were folded and can be seen in \textbf{Figure~\ref{fig:icon}}.
-                 When cuts are made from the shape, I wanted the dashed lines to appear intact so the user does not have to recall were the folds are. I decided to make the majority of shapes created of the type CAShapeLayer. This was to make it simple to layer the shapes in the order I desired. When cuts were made from the virtual paper, I could bring the dashed line shape to the front of the view easily. This effect is illustrated in \textbf{Figure~\ref{fig:icon}} where some shapes have already been cut.
+                 The foldValue determines which shape of what dimensions will be created in the draw function. When this function is called, the shape is drawn and the parameters for the dashed lines are set and the function to draw the dashed line is called. The lines indicate to the user the sides of the segment that were folded and can be seen in \textbf{Figure~\ref{fig:kiriZen-createPattern}}.
+                 When cuts are made from the shape, I wanted the dashed lines to appear intact so the user does not have to recall were the folds are. I decided to make the majority of shapes created of the type CAShapeLayer. This was to make it simple to layer the shapes in the order I desired. When cuts were made from the virtual paper, I could bring the dashed line shape to the front of the view easily. This effect is illustrated in \textbf{Figure~\ref{fig:kiriZen-createPattern}} where some shapes have already been cut.
                  
-                 The user can create the cuts by tapping on the screen. I decided that the user must be able to cut from the edge of the paper. This is to make the transition to real life easier if the user wanted to try out their creations. To cut with scissors, you must start of the edge of the paper, not in the middle. I also decided not to remove the smaller pieces of paper as those can make for interesting patterns, and I do not wish to make the decision for the user which pieces they would like to keep, and which they would like to discard.
+                 The user can create the cuts by tapping on the screen. I decided that the user must be able to cut from the edge of the paper. This is to make the transition to real life easier if the user wanted to try out their creations. To cut with scissors, you must start of the edge of the paper, not in the middle as this is difficult to do with multiple folds of paper. I also decided not to remove the smaller pieces of paper as those can make for interesting patterns, and I do not wish to make the decision for the user which pieces they would like to keep, and which they would like to discard.
                  
                  \begin{table}[h!]
                       \begin{center}
@@ -701,11 +702,9 @@
                       \end{center}
                     \end{table}
                     
-                 To implement the cutting function, I used a number of data structures to hold information. 
+                 To implement the cutting function, I used a number of data structures to hold information. These data structures are described in \textbf{Table~\ref{tab:table1}}. The arrays which hold the CAShapeLayers are for the purpose of removing the shapes when necessary (through the user action of clear and undo, or removing the circles and lines once a user finishes a cut and the cut shape is created. It is important to not that adding to an array in swift (.append) is of complexity O(1) \cite{O1}.
                  
-                 The arrays which hold the CAShapeLayers are for the purpose of removing the shapes when necessary (through the user action of clear and undo, or removing the circles and lines once a user finishes a cut and the cut shape is created. Adding from an appending an array in swift is of complexity O(1) \cite{O1}. 
-                 
-                 I wrote a method didTap() which takes in a UITapGestureRecognizer. The UITapGestureRecognizer contains information about the tap. I compared the colour of the pixels of the tap with the colour of the background with the methods getPixelColorAt() and comparePixels() which take in the location of the tap and the array of RGB colour respectively. The comparePixels() method returns true if the colour is within a given range. This is controlling for any minor image alterations for the match pattern portion of the app. The overlay image displayed can be slightly distorted in colour as I created the images by taking screenshots of cuts I had made in an earlier version of the application. This distortion is unable to be seen by the naked eye, however it is picked up when analysing the pixel colour. 
+                 I wrote a method didTap() which takes in a UITapGestureRecognizer. The UITapGestureRecognizer contains information about the tap. I compared the colour of the pixels at the location of the tap with the colour of the background. I did this with the methods getPixelColorAt() and comparePixels() which take in the location of the tap and the array of RGB colours of the tap location respectively. The comparePixels() method returns true if the colour is within a given range. This controls for any minor image alterations for the match pattern portion of the app. The overlay image displayed can be slightly distorted in colour as I created the images by taking screenshots of cuts I had made in an earlier version of the application. This distortion is unable to be seen by the naked eye, however it is picked up when analysing the pixel colour. 
                  
                  
                   \begin{wrapfigure}{r}{0.4\textwidth}
@@ -717,42 +716,41 @@
                     
                  If the user has tapped outside the virtual paper for their initial tap, a purple circle is displayed to indicate the start point. The circle is displayed and added to the circleArray. The initial tap is recorded, the tap counter is incremented and the co-ordinates added to the pathArray. 
                  
-                 As the tapCount is now 1, the first if statement is skipped and there is a check to see if the current tap is within a 20 unit radius (the same size as the circles that are created) of the initial tap. 
+                 As the tapCount is now 1, the first ``if" statement is skipped and there is a check to see if the current tap is within a 20 unit radius (the same size as the circles that are displayed after a tap) of the initial tap. 
                  
-                 If it is not, a dotted line is created from the last point to the current point, and added to the lineArray. A clear circle displayed at the current point (to differentiate from the initial tap) and added to the circle array. The current tap co-ordinate is added to the pathArray, and finally the the tap count is incremented.
-                 
-                 This is repeated with as taps occur until the current tap is within a 20 unit radius of the initial tap. In this case, the shape is created. To do this, the path is looped through and a UIBezierPath is created out of the co-ordinated which forms the shape that is filled with the background colour. The shape is added to the shapeArray. The circleArray, pathArray, lineArray and tapCount are all reset and the dashedLine() function is called to bring the dashedLine to the front. 
+                 If it is not, a dotted line is created from the last point to the current point, and added to the lineArray. A clear circle displayed at the current point (to differentiate from the initial tap) and added to the circle array. The current tap co-ordinate is added to the pathArray, and finally the the tap count is incremented. This is repeated as taps occur until the current tap is within a 20 unit radius of the initial tap. In this case, the shape is created. To do this, the pathArray is looped through and a UIBezierPath is created out of the co-ordinates which form the shape that is filled with the background colour. The shape is added to the shapeArray. The circleArray, pathArray, lineArray and tapCount are all reset and the dashedLine() function is called to bring the dashedLine to the front. 
 
                 %Create flow chart of above
             
              \paragraph{Undo and Clear}
-              I expanded the functionality of the undo button as I observed that the users were reaching for the it when part-way through creating a shape to edit their last point. 
-              
-              If there are partly constructed shapes, the last circles (and line if present) will be removed from view and then from the circleArray. The last line will also be removed from view and that line removed from the line array if the circle is not the inital point. An if statement checks to see if the arrays are empty before removing anything.
-              If only fully constructed shapes are present the last shape will be removed from the view and from the shape array. 
+              I expanded the functionality of the undo button as I observed that the users were reaching for it when part-way through cutting a shape to edit their last point. 
+              When the undo button is pressed, if there are partly constructed shapes, the last circles will be removed from view and then from the circleArray. The last line will also be removed from view and that line removed from the line array if the circle is not the inital point. An ``if" statement checks to see if the arrays are empty before removing anything. If only fully constructed shapes are present the last shape will be removed from the view and from the shape array. The tapCount is also decremented. 
               
               The clear button will reset all the arrays and counters (shapeArray, circleArray, pathArray, lineArray and tapCount).
     
 
     \subsubsection{Reveal}
             \paragraph{}
-            When the reveal button is pressed on the create screen, ``CreatePatternVC", handles the segue to ``RevealVC" transferring the foldValue and takes a screenshot passing this image through to ``RevealVC". ``RevealVC" makes copies of this screenshot depending on how many segments the image will unfold to. Each copy is transformed with appropriate parameters to create the unfolded image.  \begin{wrapfigure}{r}{0.25\textwidth}
+            When the reveal button is pressed on the create screen, ``CreatePatternVC" handles the segue to ``RevealVC", transferring the foldValue, and takes a screenshot passing this image through to ``RevealVC". ``RevealVC" makes copies of this screenshot depending on how many segments the pattern created will unfold to. Each copy is transformed with appropriate parameters to create the unfolded image.  
+            
+            \begin{wrapfigure}{r}{0.25\textwidth}
                         \centering
                         \includegraphics[width=0.25\textwidth]{KiriZen/createUnfoldedPattern}
                         \caption{This pattern created from the cuts made by the user in \textbf{Figure~\ref{fig:kiriZen-createPattern}}. The foldValue here is 6.}
                         \label{fig:kiriZen-createUnfoldedPattern}
                     \end{wrapfigure}
-            For foldValues of 2 and 4, the images are cropped copied, and placed in a UIImageView where they are transformed. The images are then added to the subview. 
             
-            If the foldValue is 2, the copies are cropped, the image is flipped, to -1 in the horizontal directed essentially reflecting it, then it is translated to be opposite the unflipped segment. 
+            For foldValues of 2 and 4, the images are cropped, copied, and placed in a UIImageView where they are transformed. The images are then added to the subview. 
             
-            For a foldValue of 4, the copies are cropped, one copy is flipped in the x direction, another the y direction and the other one, in both directions. They are translated to their corresponding quadrant. 
+            If the foldValue is 2, the copies of the image of the created pattern are cropped, the image reflected in the horizontal axis, and then it is translated to be opposite the unflipped segment. 
+            
+            For a foldValue of 4, the copies are cropped, one copy is reflected in the x-axis, another the y-axis and the other one, in both axis. They are translated to their corresponding quadrant. 
                     
             The foldValues of 6 and 8 were much harder to display as images can only be cropped with a rectangle. The solution is to add a CALayer ``mask" to the image which is essentially creating a layer that makes the images underneath invisible with a polygon shaped hole of set dimensions where you can see the image below.
             
             The relevant number of copies were made for the transformations of foldValues of 6 and 8. The transformation also involved rotations in radians this time as well as scaling and translating similar to before.
                     
-            As there were so many copies of the segments that needed displaying in some cases, a challenge in this class was compressing all the code to the necessary steps. I created one function for transformations that was extremely helpful when refactoring my code as this method was called for every copy of the pattern. 
+            As there were so many copies of the segments that needed displaying in some cases, a challenge in this class was compressing all the code to the necessary steps. I created one function for transformations that was extremely helpful when refactoring my code as this method was called for almost every copy of the pattern. 
             
 
     \subsection{Match Pattern}
@@ -761,7 +759,7 @@
                     
         \subsubsection{Match Create}
             \paragraph{}
-            For the rest of the match pattern section, I inherited from the relevant classes in the create pattern section. This was important as this allowed me to reuse the code without copying it. It was also very useful as this helped features such as the buttons stay consistent as they were displayed in the same location and had same appearance. The shape of the folded segments were also the same. The inheritance helps user use recognition rather than recall, making the application easier to use. 
+            For the rest of the match pattern section, I inherited from the relevant classes in the create pattern section. This was important as this allowed me to reuse the code without copying it. It was also very useful as this helped features such as the buttons stay consistent as they were displayed in the same location and had same appearance. The shape of the folded segments were also the same. The inheritance helps the user use recognition rather than recall, making the application easier to use. 
 
             \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
@@ -796,15 +794,15 @@
                           \textbf{Action Name} & \textbf{Action Trigger}\\\hline
                             touchDown & The user presses down on the button within its boundaries (occurs before touchUpInside) \\\hline
                             touchUpInside & The user presses down on the button within its boundaries (occurs after touchDown) \\\hline
-                            touchCancel & The touch is cancelled (system trigger) \\\hline
+                            touchCancel & The touch is cancelled (from a system trigger) \\\hline
                             touchDragOutside & The users drags their finger outside the button's boundaries\\\hline
                         \end{tabular}
                       \end{center}
                     \end{table}
                     
-                    The target button displays the target image with the ``touchDown" action, and removes the image with ``touchUpInside", ``touchCancel", and ``touchDragOutside". Without this, the target image would be left on the screen if the user performs certain actions or if the system cancels an action. This would allow the user to be able cut shapes on the background screen even with it being blocked by the target image creating a problem similar to that of the the problem seen in \textbf{Figure~\ref{fig:peppaGlitchLine}}. In addition the user may not be able to remove the target image from view. 
+                    The target button displays the target image with the ``touchDown" action, and removes the image with ``touchUpInside", ``touchCancel", and ``touchDragOutside". Without this, the target image would be left on the screen if the user performs certain actions or if the system cancels an action. This would allow the user to be able cut shapes on the background screen even with it being blocked by the target image creating a problem similar to that of the the problem seen in \textbf{Figure~\ref{fig:peppaGlitchLine}} (the line is drawn on top of the pop-up in the application). In addition the user may not be able to remove the target image from view. 
                     
-                    The overlay button is activated when touchDown or touchDragOutside occurs which will show the alter until ``Yes" is selected. It will subsequently add or remove the overlay from the screen when pressed (depending on if it is already displayed or not).
+                    The overlay button is activated when touchDown or touchDragOutside occurs which will show the alert until ``Yes" is selected. It will subsequently add or remove the overlay from the screen when pressed (depending on if it is already displayed or not).
                     
                     \begin{figure}[!ht]
                         \begin{minipage}{0.45\textwidth}
