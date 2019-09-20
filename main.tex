@@ -313,7 +313,7 @@
                         \end{minipage}
                     \end{figure}
                     
-                    The app will freeze if the cutting line touches itself as seen in \textbf{Figure~\ref{fig:peppaFreeFormCut}}. Sometimes the paper is not cut, even when the line the user is drawing is registered. If the user moves their finger too quickly, the cut may not be created and the registered line will disappear as if an illegal cut was drawn.
+                    The app will freeze if the cutting line comes in contact with itself as shown in \textbf{Figure~\ref{fig:peppaFreeFormCut}}. Sometimes the paper is not cut, even when the line the user is drawing is registered. If the user moves their finger too quickly, the cut may not be created and the registered line will disappear as if an illegal cut was drawn.
                     
                     On the ready made shapes page (\textbf{Figure~\ref{fig:peppaShapes}}), it is not obvious that you need to drag the shapes of the cuts as they appear in the same location as the button bar. They only appear if you drag your finger not when you tap the button. The button will register the tap by flashing but no reaction will occur from the app if the user only tap not drag your finger.  even though the buttons glow when tapped. The ready made cuts produce a jagged edge if the user enlarges them as seen in cut made in the top left of \textbf{Figure~\ref{fig:peppaShapes}}. Some of the ready made cuts are not in keeping with the theme such as duck and fish shapes for a snowflake / Christmas application. 
                     The main problem with the application is the assumed knowledge of the buttons. For example, in \textbf{Figure~\ref{fig:peppaMain}} and \textbf{Figure~\ref{fig:peppaGlitchPoint}} it is unclear what the buttons with snowflakes on them in will do. They appear to allow the user to drag snowflakes onto the window in the background, however, it is difficult to use so the functionality is unclear. The left facing arrow button on the main screen shown in \textbf{Figure~\ref{fig:peppaMain}} will take the user back to the previous screen. This navigation to a previous screen is a common action for the left arrow button. However, on the free-form cut screen shown in \textbf{Figure~\ref{fig:peppaFreeFormCut}}, pressing the left arrow button will undo the shape the user has just cut.
@@ -442,7 +442,7 @@
             Similar to the target audience for origami and kirigami there is no specific target age but an interest in Japanese culture and paper crafts is expected. As the name I have chosen for the app are Japanese words, this target audience will be drawn to it. I have highlighted a few key groups below. 
             
             \paragraph{Children}
-            This application is especially beneficial for children. Visualising how the shapes they are creating will unfold, or how the shapes already created derive from a single folded component, they will practice mathematical skills such as geometry, fractions and spacial awareness.
+            This application is especially beneficial for children. Visualising how the shapes they are creating will unfold, or how the shapes already created derive from a single folded component, will allow them to practice mathematical skills involving geometry, fractions and spacial awareness.
             
             In addition, the application can be used to enhance the children's creativity and encourage them to try the creations they made on the application in real life. 
             
@@ -827,9 +827,8 @@
                     \end{figure}
             
  \subsubsection{Reveal Match VC}
-    
             \paragraph{}
-            Target Overlay – alpha 0.7
+            ``RevealMatchVC" inherits from ``RevealVC" therefore using the foldValue information passed via segues, it can construct the unfolded image as before in the create pattern section. There is an additional feature on this screen of the target button. When held down, the target is overlayed onto the image which was created to allow the user to compare their creation with the target their were aiming for. The target image has an alpha value of 0.7 allowing the user to see their image underneath as in \textbf{Figure~\ref{fig:kiriZen-matchUnfoldedPattern}}.
 
 \clearpage
 \newpage
@@ -1012,52 +1011,18 @@
 \section{Discussion}
     \subsection{Achievements}
         \paragraph{}
-        using inheritance ... 
-         flexibility, scalability, feasibility, reusability, and security into a structured solution
-         Refactoring, 
-         common buttons - consistency
-         canvas, reveal. 
+        I created an application from scratch in a new language I was not familiar with which was a daunting task. The majority of users reported they felt relaxed while using the application, confirming that it can be used as an effective part of the mindfulness practice.  The background research I produced turned out to be extremely useful throughout the project. While carrying out my investigation, I was surprised with how few of the apps had a reliable cutting features and there were many inconsistencies throughout. The application I created is unlike these as the cutting features is predictable which was confirmed in the evaluation. The users also confirmed that the buttons and theme was consistent. I am satisfied that I implemented all of the major requirements successfully and was able to expand by adding smaller non-core features.
         
-        While creating making smaller methods
-        
-        I created an application from scratch in a new language I was not familiar with. The application is unlike the other iPhone application I researched as it has consistent features and a reliable cutting action. The majority of users reported they felt relaxed while using the application confirming that it can be used as an effective part of the mindfulness practice therefore I believe I have achieved my aims. 
-        
-        While conducting the background research, I was surprised with how few of the apps had a reliable core cutting features and many inconsistencies throughout. My application contrasts this and users pick up on the core functionality quickly.
-        
-        I am satisfied that I implemented all of the major requirements successfully and was able to expand by adding smaller non-core features.
+        I successfully made use of inheritance in the match pattern section of the application to reuse code already created rather than repeating it. I created a common buttons class with methods that create a subset of features of the buttons. This kept all the buttons consistent and I did not have to repeat the code upon each creation of a button. I learnt that refactoring my code, especially in the reveal section by creating a transform function, helped make my code easier to read and reduced the quantity. Throughout I named my variables thoughtfully which made it very easy to understand my thought process and the progression of the function when I looked at a section of code after a longer period of time. 
         
     \subsection{Challenges}
     
         \paragraph{}
-        It was challenging as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. 
+        It was very challenging to create this application as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. For example I attempted a few other methods of cutting before settling on the method similar to that of Paper Snowflake Maker which was the best method found in the background research. This trial and error slowed the process down, however I had a contingency plan in place where I left some time to spare that could be filled if necessary. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use.
         
-        How the user should cut. 
+        I had trouble layering the shapes on the screen when I was using different formats which is why decided to make the majority of objects on screen CA shapes. I eventually understood how to layer the objects and when to rearrange them. CA shapes were very helpful when creating the revealed version of the folds created from triangular segments as I used them as a mask to crop the copies to a triangle.
         
-        Layering the shapes on the screen on top of dashed line and cut.
-        
-        Reveal page transformations. 
-        
-        Limitation 
-        compatibility
-        
-            \subsection{Process}
-            \paragraph{}
-            The background research I produced turned out to be extremely useful throughout the project.
-            
-            The process of creating this application was very new and difficult. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use. 
-            
-                            
-%                 Challenges:
-% Learning swift
-% Xcode – notoriously buggy
-% Unfamiliar with how code works in real time interactions & memory available
-% Creating the entire process from back end to front end in a highly visual app
-
-% Improvements throughout 
-% Watching others interact with my app:
-% Turned into an app that is meant for relaxing 
-% Added instructions, then used animations rather than instructions
-% Added additional functionality to undo and clear buttons
+        One limitation of the application is compatibility. The application will currently only perform on iPhone 7/8 (I thoroughly tested it on this as the is the and the evaluators used my phone to trial the app). This will be something I need to keep in mind when creating an app in the future, as there are over 10 devices this application could be available on including other iPhone versions and iPads. I would need to thoroughly test it on each device before publishing the application. 
             
     \subsection{Future}
                 \paragraph{}
@@ -1081,10 +1046,8 @@
 
             Satisfied with user feedback -- relaxing.
 
-
             I am grateful to have had the opportunity to undertake this project. I enjoyed the creativity and freedom of control that came with making it and I plan to publish it on the app store in the future.
 
-        
 \newpage
 \let\Section\section 
 \def\section*#1{\Section{#1}}  
