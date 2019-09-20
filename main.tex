@@ -28,17 +28,11 @@
     \maketitle
 
 \end{titlepage}
-% \begin{frame}{}
-%     \begin{multicols}{2}
     \tableofcontents
-
-% \end{multicols}
-% \end{frame}
-
 \newpage
 
 \begin{abstract}
-    In this project I created an idea, took it through the development process including evaluation. The idea was an application inspired by kirigami and designed to create a relaxing immersive experience. I looked at similar application to gain an understating of the market I would be designing my app for. The two generations of prototypes which were critiqued by prospective users. The application was implemented in Swift. Additional features were added. Nielsen's heuristics were used to evaluate the final application. 
+    This project focuses on creating an iPhone application inspired by kirigami and designed to create a relaxing immersive experience. Kirigami is a paper cutting art derived from origami where paper is folded and shapes are cut out of it, resulting in symmetrical patterns when unfolded. I conducted background research by investigating similar applications to gain an understating of the market I would be designing my app for. I then expanded my idea and took it through development by first creating two generations of prototypes which were critiqued by prospective users. The application involves two activities, creating a cutting pattern from a virtually folded piece of paper, and attempting to matching a target pattern which has been randomly selected. The application was implemented in Swift. The decisions involved in creating the core functionality are discussed as well as the human computer interaction aspects of the application. Additional features were added. Nielsen's heuristics were used to evaluate the final application. I discuss the challenges and limitations The application has been successfully created 
 
 \end{abstract}
 
@@ -1011,18 +1005,18 @@
 \section{Discussion}
     \subsection{Achievements}
         \paragraph{}
-        I created an application from scratch in a new language I was not familiar with which was a daunting task. The majority of users reported they felt relaxed while using the application, confirming that it can be used as an effective part of the mindfulness practice.  The background research I produced turned out to be extremely useful throughout the project. While carrying out my investigation, I was surprised with how few of the apps had a reliable cutting features and there were many inconsistencies throughout. The application I created is unlike these as the cutting features is predictable which was confirmed in the evaluation. The users also confirmed that the buttons and theme was consistent. I am satisfied that I implemented all of the major requirements successfully and was able to expand by adding smaller non-core features.
+        I created an application from scratch in a new language I was not familiar with which was a daunting task. The majority of users reported that they felt relaxed whilst using the application, confirming that it can be used as an effective part of the mindfulness practice. The background research I produced turned out to be extremely useful throughout the project. Whilst carrying out my investigation, I was surprised with how few of the apps had a reliable cutting features and there were many inconsistencies throughout. The application I created is unlike these as the cutting features are predictable which was confirmed in the evaluation. The users also confirmed that the buttons and theme were consistent. I am satisfied that I implemented all of the major requirements successfully, and was able to make improvements through adding smaller non-core features.
         
-        I successfully made use of inheritance in the match pattern section of the application to reuse code already created rather than repeating it. I created a common buttons class with methods that create a subset of features of the buttons. This kept all the buttons consistent and I did not have to repeat the code upon each creation of a button. I learnt that refactoring my code, especially in the reveal section by creating a transform function, helped make my code easier to read and reduced the quantity. Throughout I named my variables thoughtfully which made it very easy to understand my thought process and the progression of the function when I looked at a section of code after a longer period of time. 
+        I successfully made use of inheritance in the match pattern section of the application to reuse code already created rather than repeating it. I created a common buttons class with methods that create a subset of features of the buttons. This kept all the buttons consistent and I did not have to repeat the code upon each creation of a button. I learnt that refactoring my code, especially in the reveal section, by creating a transform function, helped to make my code easier to read and reduced the quantity. Throughout, I named my variables carefully which made it very easy to understand my thought process and the progression of the function when I looked at a section of code after a longer period of time. 
         
     \subsection{Challenges}
     
         \paragraph{}
-        It was very challenging to create this application as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. For example I attempted a few other methods of cutting before settling on the method similar to that of Paper Snowflake Maker which was the best method found in the background research. This trial and error slowed the process down, however I had a contingency plan in place where I left some time to spare that could be filled if necessary. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use.
+        It was very challenging to create this application as I was unfamiliar with how the iPhone collects data from user interactions and what can be done in real time. For example, I attempted a few other methods of cutting before settling on the method similar to that of Paper Snowflake Maker which was the best method found in the background research. This trial and error slowed the process down, however, I had a contingency plan in place where I left some time to spare that could be filled if required. I had never coded in this language so it took a few weeks to get used to the syntax and discover what methods are available to use.
         
-        I had trouble layering the shapes on the screen when I was using different formats which is why decided to make the majority of objects on screen CA shapes. I eventually understood how to layer the objects and when to rearrange them. CA shapes were very helpful when creating the revealed version of the folds created from triangular segments as I used them as a mask to crop the copies to a triangle.
+        I had trouble layering the shapes on the screen when I was using different formats, which is why decided to make the majority of objects on screen CA shapes. I eventually understood how to layer the objects and when to rearrange them. CA shapes were very helpful when creating the revealed version of the folds, created from triangular segments, as I used them as a mask to crop the copies to a triangle.
         
-        One limitation of the application is compatibility. The application will currently only perform on iPhone 7/8 (I thoroughly tested it on this as the is the and the evaluators used my phone to trial the app). This will be something I need to keep in mind when creating an app in the future, as there are over 10 devices this application could be available on including other iPhone versions and iPads. I would need to thoroughly test it on each device before publishing the application. 
+        One limitation of the application is compatibility. The application will currently only perform on iPhone 7/8 (I thoroughly tested it on this as and the evaluators used my phone to trial the app). This will be something I will need to keep in mind when creating an app in the future, as there are over 10 devices that this application could be available on, including other iPhone versions and iPads. I would need to thoroughly test it on each device before publishing the application. 
             
     \subsection{Future}
                 \paragraph{}
@@ -1042,11 +1036,7 @@
 \section{Conclusion}
         
             \paragraph{}
-            This project meets the aim of creating and developing a kirigami based application from scratch to a final product. KiriZen will allow a new audience to experience kirigami as a relaxing, recreational activity with the potential for users to be inspired to physically recreate their favourite designs, created within the app.
-
-            Satisfied with user feedback -- relaxing.
-
-            I am grateful to have had the opportunity to undertake this project. I enjoyed the creativity and freedom of control that came with making it and I plan to publish it on the app store in the future.
+            This project meets the aim of creating and developing a kirigami based application from scratch to a final product. KiriZen will allow a new audience to experience kirigami as a relaxing, recreational activity with the potential for users to be inspired to physically recreate their favourite designs, created within the app. I am grateful to have had the opportunity to undertake this project and enjoyed the creativity and freedom of control that came with making it. I intend to publish it on the app store in the future, to disseminate KiriZen to a wider audience. Taking on board future feedback, I plan to continue updating and improving the app to make KiriZen the very best it can be.
 
 \newpage
 \let\Section\section 
